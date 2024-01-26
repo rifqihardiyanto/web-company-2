@@ -1,16 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Nashir | About')
+@section('title', 'PT Niaga Wasilah Al Khair')
 
 @section('content')
 
     <!--==============================Breadcumb============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/breadcumb/breadcrumb-bg.png" data-overlay="black" data-opacity="8">
+    <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black" data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">About Us</h1>
+                <h1 class="breadcumb-title">Tentang Kami</h1>
                 <ul class="breadcumb-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('') }}">Home</a></li>
                     <li>About Us</li>
                 </ul>
             </div>
@@ -108,19 +108,18 @@
     <div class="feature-area-2 overflow-hidden">
         <div class=" position-relative">
             <div class="img-half img-left feature-thumb-2">
-                <img src="assets/img/normal/wcu-thumb-3.png" alt="img">
-                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img
-                        src="assets/img/normal/wcu-thumb-3-2.png" alt="img"></div>
+                <img src="{{ asset('assets/new_img/about2.jpg') }}" alt="img">
+                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img src="{{ asset('assets/new_img/about1.jpg') }}" alt="img"></div>
             </div>
             <div class="container">
                 <div class="row justify-content-lg-end">
                     <div class="col-xl-5 col-lg-6">
                         <div class="title-area space-bottom mb-0 ms-xl-0 ms-lg-4 ms-0 text-center text-lg-start">
                             <span class="sub-title">Get to know Us</span>
-                            <h2 class="sec-title">Excellent consultancy Gives you easy success.</h2>
-                            <p class="mt-30 mb-40">Aenean tristique ante velit, iaculis semper est scelerisque nec.
-                                Nunc eget commodo dui, sit amet ullamcorper magna. Integer</p>
-                            <div class="feature-circle-wrap">
+                            <h2 class="sec-title">Menjadi yang Terbaik untuk Memberikan yang Terbaik</h2>
+                            <p class="mt-30 mb-40">PT Niaga Wasilah Alkhair (Nashir) adalah perusahaan digital marketing yang berfokus pada distribusi produk herbal solutif. Didirikan pada tahun 2015, hingga saat ini mampu untuk terus melebarkan sayap bisnisnya di kancah nasional. Memegang teguh nilai "Sebaik-baik manusia adalah yang bermanfaat bagi orang lain", Nashir bertekad untuk selalu menghadirkan solusi terbaik untuk permasalahan kesehatan masyarakat.</p>
+                            <p class="mt-30 mb-40">Besarnya kepercayaan, membuat Nashir semakin yakin untuk terus melakukan riset dan mengembangkan inovasi-inovasi terbaru untuk menjawab setiap kebutuhan masyarakat khususnya dalam bidang kesehatan. Hingga sekarang, Nashir telah menjangkau jutaan customers dari dalam negeri maupun mancanegara.</p>
+                            {{-- <div class="feature-circle-wrap">
                                 <div class="feature-circle">
                                     <div class="progressbar">
                                         <div class="circle" data-percent="95">
@@ -145,7 +144,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                     </div>
@@ -154,7 +153,7 @@
         </div>
     </div>
     <!--==============================Visi==============================-->
-    <div class="video-sec3 " data-bg-src="assets/img/bg/video-bg4-1.png" data-overlay="title" data-opacity="8">
+    <div class="video-sec3 " data-bg-src="{{ asset('assets/new_img/bg_about_visi.jpg') }}" data-overlay="title" data-opacity="8">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -171,207 +170,35 @@
     <!--============================== Team Area ==============================-->
     <section class="space">
         <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title">Our Team</span>
+                <h2 class="sec-title">Experience Team Members</h2>
+            </div>
             <div class="row gy-30">
                 <!-- Single Item -->
+                @foreach ($managements as $data)
                 <div class="col-sm-6 col-lg-4 col-xxl-3">
                     <div class="th-team team-card">
                         <div class="team-img-wrap">
                             <div class="team-img">
-                                <img src="assets/img/team/team_3_1.png" alt="Team">
+                                <img src="{{ asset('uploads/' . $data->gambar) }}" alt="Team">
                             </div>
                             <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
+                                <a class="team-social-activate_btn">
                                     <i class="far fa-plus"></i>
                                 </a>
                                 <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
+                                    <a target="_blank" href="mailto:{{ $data->email }}"><i class="fas fa-envelope"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Eleanor Pena</a></h3>
-                            <span class="team-desig">Founder & CEO</span>
+                            <h3 class="team-title"><a href="team-details.html">{{ $data->nama }}</a></h3>
+                            <span class="team-desig">{{ $data->jabatan }}</span>
                         </div>
                     </div>
                 </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_2.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Esther Howard</a></h3>
-                            <span class="team-desig">Sr. Manager</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_3.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Annette Black</a></h3>
-                            <span class="team-desig">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_4.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Ronald Richards</a></h3>
-                            <span class="team-desig">Web Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_5.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Jade Smith</a></h3>
-                            <span class="team-desig">Founder & CEO</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_6.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Selena Mariasha</a></h3>
-                            <span class="team-desig">Sr. Manager</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_7.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Emerson Anderson</a></h3>
-                            <span class="team-desig">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="assets/img/team/team_3_8.png" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a href="#" class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">Evelyn Romano</a></h3>
-                            <span class="team-desig">Web Designer</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

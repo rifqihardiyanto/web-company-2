@@ -1,18 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'Nashir | Contact')
+@section('title', 'PT Niaga Wasilah Al Khair')
 
 @section('content')
 
     <!--==============================
         Breadcumb
     ============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/breadcumb/breadcrumb-bg.png" data-overlay="black" data-opacity="8">
+    <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black" data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Contact Us</h1>
                 <ul class="breadcumb-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('') }}">Home</a></li>
                     <li>Contact Us</li>
                 </ul>
             </div>

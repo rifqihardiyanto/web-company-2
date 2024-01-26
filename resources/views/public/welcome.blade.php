@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Insurax - Insurance Company HTML Template - Home Four</title>
+    <title>PT Niaga Wasilah Al Khair</title>
     <meta name="author" content="Insurax">
-    <meta name="description" content="Insurax - Insurance Company HTML Template">
-    <meta name="keywords" content="Insurax - Insurance Company HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="description" content="PT Niaga Wasilah Al Khair">
+    <meta name="keywords" content="PT Niaga Wasilah Al Khair">
+    <meta name="robots" content="PT Niaga Wasilah Al Khair">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,18 +33,14 @@
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
-    <!--==============================
- Google Fonts
- ============================== -->
+    <!--==============================Google Fonts============================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 
-    <!--==============================
- All CSS File
- ============================== -->
+    <!--==============================All CSS File============================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <!-- Fontawesome Icon -->
@@ -100,7 +96,7 @@
                         <a href="{{ url('/products') }}">Product</a>
                     </li>
                     <li>
-                        <a href="{{ url('/blogs') }}">Blogs</a>
+                        <a href="{{ url('/news') }}">News</a>
                     </li>
                     <li>
                         <a href="{{ url('/contact') }}">Contact</a>
@@ -181,7 +177,7 @@
                                                     <a href="{{ url('/products') }}">Product</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ url('/blogs') }}">Blogs</a>
+                                                    <a href="{{ url('/news') }}">News</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('/contact') }}">Contact</a>
@@ -212,83 +208,28 @@
         <div class="th-hero-wrapper hero-slider-8 th-carousel" id="heroSlide8" data-slide-show="1"
             data-md-slide-show="1" data-fade="true" data-dots="false" id="hero">
 
-
-            <div class="th-hero-slide">
-                <div class="th-hero-bg" data-bg-src="{{ asset('assets/img/hero/hero_bg_3_1.jpg') }}">
-                    <img src="{{ asset('assets/img/hero.jpg') }}" alt="Hero Image">
-                </div>
-                <div class="hero-8-thumb" data-ani="slideinleft" data-ani-delay="0.05s"
-                    data-mask-src="assets/img/hero/home3-mask.png">
-                    <img src="assets/img/hero/home3-1.jpg" alt="img">
-                </div>
-                <div class="container">
-                    <div class="hero-style8">
-                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">Insurance
-                            Destination Here</span>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Secure Your Future</h1>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.1s">Shielding Your Risks</h1>
-                        <p class="hero-text" data-ani="slideinup" data-ani-delay="0.1s">Securing your family's
-                            financial future is a priority. Our range of life insurance options provides you with
-                            choices to protect your loved.</p>
+            @foreach ($sliders as $data)
+                <div class="th-hero-slide">
+                    <div class="th-hero-bg" data-bg-src="{{ asset('assets/new_img/hero_bg_1.jpg') }}">
+                        <img src="{{ url('assets/img/update1/hero/hero_overlay_8.png') }}" alt="Hero Image">
                     </div>
-                </div>
-            </div>
-
-
-            <div class="th-hero-slide">
-                <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_3_1.jpg">
-                    <img src="assets/img/update1/hero/hero_overlay_7.png" alt="Hero Image">
-                </div>
-                <div class="hero-8-thumb" data-ani="slideinleft" data-ani-delay="0.05s"
-                    data-mask-src="assets/img/hero/home3-mask.png">
-                    <img src="assets/img/hero/home3-2.jpg" alt="img">
-                </div>
-                <div class="container">
-                    <div class="hero-style8">
-                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">Safeguarding Your
-                            Tomorrow</span>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Insurance Solution</h1>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.1s">For Every Milestone</h1>
-                        <p class="hero-text" data-ani="slideinup" data-ani-delay="0.1s">Securing your family's
-                            financial future is a priority. Our range of life insurance options provides you with
-                            choices to protect your loved.</p>
-                        <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                            <a href="about.html" class="th-btn style3">Learn More<i
-                                    class="fas fa-long-arrow-right ms-2"></i></a>
-                            <a href="contact.html" class="th-btn style6">Get A Quote<i
-                                    class="fas fa-long-arrow-right ms-2"></i></a>
+                    <div class="hero-8-thumb" data-ani="slideinleft" data-ani-delay="0.05s"
+                        data-mask-src="assets/img/hero/home3-mask.png">
+                        <img src="{{ asset('uploads/' . $data->gambar) }}" alt="img">
+                    </div>
+                    <div class="container">
+                        <div class="hero-style8">
+                            <span class="hero-subtitle" data-ani="slideindown"
+                                data-ani-delay="0.5s">{{ $data->judul }}</span>
+                            <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">
+                                {{ $data->sub_judul }}</h1>
+                            <p class="hero-text" data-ani="slideinup" data-ani-delay="0.1s">{{ $data->deskripsi }}
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-
-            <div class="th-hero-slide">
-                <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_3_1.jpg">
-                    <img src="assets/img/update1/hero/hero_overlay_7.png" alt="Hero Image">
-                </div>
-                <div class="hero-8-thumb" data-ani="slideinleft" data-ani-delay="0.05s"
-                    data-mask-src="assets/img/hero/home3-mask.png">
-                    <img src="assets/img/hero/home3-3.jpg" alt="img">
-                </div>
-                <div class="container">
-                    <div class="hero-style8">
-                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">Empowering Your
-                            Future</span>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">Smartly Insured</h1>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.1s">Confidently Assure</h1>
-                        <p class="hero-text" data-ani="slideinup" data-ani-delay="0.1s">Securing your family's
-                            financial future is a priority. Our range of life insurance options provides you with
-                            choices to protect your loved.</p>
-                        <div class="btn-group" data-ani="slideinup" data-ani-delay="0.3s">
-                            <a href="about.html" class="th-btn style3">Learn More<i
-                                    class="fas fa-long-arrow-right ms-2"></i></a>
-                            <a href="contact.html" class="th-btn style6">Get A Quote<i
-                                    class="fas fa-long-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="icon-box">
             <button data-slick-prev="#heroSlide8" class="slick-arrow default"><i
@@ -319,13 +260,14 @@
                 <div class="col-xxl-5 col-lg-6">
                     <div class="title-area mb-30">
                         <span class="sub-title">
-                            About Company
+                            Tentang Nashir
                         </span>
-                        <h2 class="sec-title">Covering your future With reliable insurance.</h2>
+                        <h2 class="sec-title">Perdagangan Menjadi Perantara Kebaikan</h2>
                     </div>
-                    <p class="mt-n1 mb-30">Phasellus placerat, ante sit amet sodales fermentum, purus lectus aliquam
-                        eros, elementum blandit ligula turpis sit amet lorem. Quisque purus ante, malesuada eget arcu
-                        et, convallis</p>
+                    <p class="mt-n1 mb-30">PT Niaga Wasilah Alkhair (Nashir) selalu mengedepankan produk berkualitas
+                        tinggi, teruji laboratorium berstandar, dan memberikan kepuasan konsumen. Menjadikan setiap
+                        produk Nashir pilihan utama bagi masyarakat dalam mengatasi setiap masalah kesehatan yang
+                        dihadapi.</p>
                     <div class="row gx-30 align-items-center">
                         <div class="col-sm-auto mb-sm-0 mb-4">
                             <div class="thumb"><img src="assets/img/normal/about_4-3.png" alt="img"></div>
@@ -333,32 +275,18 @@
                         <div class="col-sm-auto">
                             <div class="checklist">
                                 <ul>
-                                    <li><i class="fa fa-check-circle"></i> 24/7 Call Services Available</li>
-                                    <li><i class="fa fa-check-circle"></i> Expert Team Members</li>
-                                    <li><i class="fa fa-check-circle"></i> How to Secure Your Future</li>
+                                    <li><i class="fa fa-check-circle"></i> Tim Profesional Terbaik</li>
+                                    <li><i class="fa fa-check-circle"></i> Produk Berkualitas</li>
+                                    <li><i class="fa fa-check-circle"></i> Pelayanan Prima</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="skill-feature mt-30">
-                        <h5 class="skill-feature_title">Customer Satisfied</h5>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 94%;">
-                                <div class="progress-value">94%</div>
-                            </div>
-                        </div>
                     </div>
                     <div class="btn-group mt-50">
-                        <a href="about.html" class="th-btn">Read More<i class="fas fa-arrow-right ms-2"></i></a>
-                        {{-- <div class="about-profile2">
-                            <div class="avater">
-                                <img src="assets/img/normal/image-1.png" alt="avater">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="title">Ronald Richards</h3>
-                                <span class="desig">Founder Of CEO</span>
-                            </div>
-                        </div> --}}
+                        <a href="{{ url('about') }}" class="th-btn">Read More<i
+                                class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -367,119 +295,23 @@
     <!--============================== Brand Area ==============================-->
     <section class="brand-sec1" data-bg-src="assets/img/bg/brand-bg1.png">
         <div class="title-area text-center mb-30">
-            <span class="sub-title">Global clients</span>
-            <h2 class="sec-title text-white">Worldwide Clients</h2>
+            <span class="sub-title">Produk Kami</span>
+            <h2 class="sec-title text-white">Solusi alami untuk kesehatan optimal</h2>
         </div>
         <div class="container">
             <div class="row th-carousel" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3"
                 data-sm-slide-show="3" data-xs-slide-show="2">
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-1.png" alt="Brand Logo">
+                @foreach ($categories as $data)
+                    <div class="col-auto">
+                        <div class="brand-box">
+                            <a href="{{ url('category/' . $data->id) }}"><img src="{{ asset('uploads/' . $data->gambar) }}" alt="Brand Logo"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-2.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-3.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-4.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-5.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-1.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-2.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-3.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-4.png" alt="Brand Logo">
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="brand-box">
-                        <img src="assets/img/brand/brand1-5.png" alt="Brand Logo">
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-    <!--==============================Counter Area==============================-->
-    {{-- <div class="container">
-        <div class="counter-sec3">
-            <div class="row gy-40 justify-content-between">
-                <div class="col-xl-auto col-sm-6 counter-divider2">
-                    <div class="counter-card">
-                        <div class="counter-card_icon">
-                            <img src="assets/img/icon/counter-icon-3-1.svg" alt="img">
-                        </div>
-                        <div class="counter-card_content">
-                            <h2 class="counter-card_number"><span class="counter-number">4563</span>+</h2>
-                            <p class="counter-card_text">Success Insurance</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-auto col-sm-6 counter-divider2">
-                    <div class="counter-card">
-                        <div class="counter-card_icon">
-                            <img src="assets/img/icon/counter-icon-2-2.svg" alt="img">
-                        </div>
-                        <div class="counter-card_content">
-                            <h2 class="counter-card_number"><span class="counter-number">866</span>+</h2>
-                            <p class="counter-card_text">Satisfied
-                                Clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-auto col-sm-6 counter-divider2">
-                    <div class="counter-card">
-                        <div class="counter-card_icon">
-                            <img src="assets/img/icon/counter-icon-3-3.svg" alt="img">
-                        </div>
-                        <div class="counter-card_content">
-                            <h2 class="counter-card_number"><span class="counter-number">185</span>+</h2>
-                            <p class="counter-card_text">International
-                                Award </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-auto col-sm-6 counter-divider2">
-                    <div class="counter-card">
-                        <div class="counter-card_icon">
-                            <img src="assets/img/icon/counter-icon-3-4.svg" alt="img">
-                        </div>
-                        <div class="counter-card_content">
-                            <h2 class="counter-card_number"><span class="counter-number">225</span>+</h2>
-                            <p class="counter-card_text">Our Global Agents</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
->
+
     <!--==============================Feature Area==============================-->
     <div class="space">
         <div class="container">
@@ -570,321 +402,44 @@
             </div>
         </div>
     </div>
-    <!--==============================Testimonial Area==============================-->
-    {{-- <div class="testimonial-sec4 position-relative">
-        <div class="testi-sec5-img img-half img-right">
-            <img src="assets/img/bg/testimonial-bg4.png" alt="img">
-        </div>
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-xl-5">
-                    <div class="title-area space-top mb-0">
-                        <span class="sub-title">Testimonials</span>
-                        <h2 class="sec-title">What Client’s say About Our Insurance</h2>
-                        <p class="mt-30">Donec et lobortis quam. Praesent venenatis massa vel ullamcorper auctor.
-                            Quisque venenatis ac ipsum eget dapibus.</p>
-                        <div class="testi-thumb mt-40">
-                            <div class="shape-mockup spin d-none d-xl-block" data-bottom="-72px" data-left="-90px">
-                                <img src="assets/img/shape/testi-thumb-4-shape.png" alt="shape">
-                            </div>
-                            <img src="assets/img/testimonial/testi_4.png" alt="img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="th-carousel testi-slider4" data-slide-show="3" data-arrows="true"
-                        data-xl-arrows="true" data-ml-arrows="true" data-vertical="true">
-                        <div class="testi-box4">
-                            <div class="testi-box_wrap">
-                                <div class="thumb">
-                                    <img src="assets/img/testimonial/testi_4_1.png" alt="testimonial">
-                                </div>
-                                <div class="testi-content">
-                                    <p class="testi-box_text">Praesent venenatis massa vel ullamcorper auctor. Quisque
-                                        venenatis ac ipsum eget dapibus. Curabitur efficitur, massa sit amet </p>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <h3 class="testi-box_name h4">Ronald Richards</h3>
-                                            <span class="testi-box_desig">
-                                                UX Designer. </span>
-                                        </div>
-                                        <div class="quote-icon">
-                                            <img src="assets/img/icon/quote2.svg" alt="img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="testi-box4">
-                            <div class="testi-box_wrap">
-                                <div class="thumb">
-                                    <img src="assets/img/testimonial/testi_4_2.png" alt="testimonial">
-                                </div>
-                                <div class="testi-content">
-                                    <p class="testi-box_text">Vestibulum Praesent venenatis massa vel auctor. Quisque
-                                        ac ipsum eget dapibus. Curabitur efficitur, massa sit amet </p>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <h3 class="testi-box_name h4">Arlene McCoy</h3>
-                                            <span class="testi-box_desig">
-                                                Manager Of surance. </span>
-                                        </div>
-                                        <div class="quote-icon">
-                                            <img src="assets/img/icon/quote2.svg" alt="img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="testi-box4">
-                            <div class="testi-box_wrap">
-                                <div class="thumb">
-                                    <img src="assets/img/testimonial/testi_3_1.png" alt="testimonial">
-                                </div>
-                                <div class="testi-content">
-                                    <p class="testi-box_text">Curabitur venenatis massa vel ullamcorper auctor. Quisque
-                                        venenatis ac ipsum eget dapibus. Praesent efficitur, massa sit amet </p>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <h3 class="testi-box_name h4">Ralph Edwards</h3>
-                                            <span class="testi-box_desig">
-                                                CEO Of surance. </span>
-                                        </div>
-                                        <div class="quote-icon">
-                                            <img src="assets/img/icon/quote2.svg" alt="img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="testi-box4">
-                            <div class="testi-box_wrap">
-                                <div class="thumb">
-                                    <img src="assets/img/testimonial/testi_2_1.png" alt="testimonial">
-                                </div>
-                                <div class="testi-content">
-                                    <p class="testi-box_text">Efficitur venenatis massa vel ullamcorper auctor. Quisque
-                                        venenatis ac ipsum eget dapibus. Curabitur efficitur, massa sit amet</p>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <h3 class="testi-box_name h4">Dianne Russell</h3>
-                                            <span class="testi-box_desig">
-                                                Developer Of surance. </span>
-                                        </div>
-                                        <div class="quote-icon">
-                                            <img src="assets/img/icon/quote2.svg" alt="img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!--==============================Portfolio Area==============================-->
-    {{-- <div class="overflow-hidden space-top mb-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title-area text-center">
-                        <span class="sub-title">Latest Portfolio</span>
-                        <h2 class="sec-title">We proud of some of work.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid p-0">
-            <div class="row th-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2"
-                data-sm-slide-show="1" data-xs-slide-show="1" data-dots="false">
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_1.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_1.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Family Financial Insurance</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_2.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_2.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Life & Health Insurance</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_3.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_3.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Bank Insurance Solutions</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_4.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_4.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Insurance Consult Solution</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_1.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_1.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Family Financial Insurance</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_2.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_2.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Life & Health Insurance</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_3.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_3.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Bank Insurance Solutions</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="project-card style-2">
-                        <div class="project-img">
-                            <img src="assets/img/project/portfolio_3_4.png" alt="project image">
-                        </div>
-                        <div class="project-content">
-                            <a href="assets/img/project/portfolio_3_4.png" class="icon-btn popup-image"
-                                tabindex="-1"><i class="fa-light fa-arrow-up-right"></i></a>
-                            <h4 class="project-title"><a href="project-details.html">Insurance Consult Solution</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-    <!--============================== Blog Area ==============================-->
+    <!--============================== News Area ==============================-->
     <section class="space" id="blog-sec">
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title">Blog & News</span>
-                <h2 class="sec-title">Latest Blog & News</h2>
+                <h2 class="sec-title">Blog & Berita Terbaru</h2>
             </div>
-            <div class="row slider-shadow th-carousel" id="blogSlide1" data-slide-show="3" data-lg-slide-show="2"
+            <div class="row slider-shadow th-carousel" id="Newslide1" data-slide-show="3" data-lg-slide-show="2"
                 data-md-slide-show="2" data-sm-slide-show="1" data-arrows="true">
-                <div class="col-md-6 col-xl-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
-                        </div>
-                        <div class="blog-card_content">
-                            <div class="blog-meta">
-                                <i class="fal fa-calendar-alt"></i>12 Jun. 2023
+                @foreach ($late_post as $data)
+                    <div class="col-md-6 col-xl-4">
+                        <div class="blog-card">
+                            <div class="blog-img">
+                                <img src="{{ asset('uploads/' . $data->gambar_1) }}" alt="blog image">
                             </div>
-                            <h3 class="blog-title border-bottom box-title"><a href="blog-details.html">Insurance is a
-                                    highly Regulated industry.</a></h3>
-                            <a href="blog-details.html" class="half-line-btn">Read More</a>
+                            <div class="blog-card_content">
+                                <div class="blog-meta">
+                                    <i class="fal fa-calendar-alt"></i> {{ $data->created_at->format('Y-m-d') }}
+                                </div>
+                                <h3 style="display: block;
+                                max-width: 400px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;"
+                                    class="blog-title border-bottom box-title"><a
+                                        href="{{ url('news/' . $data->slug) }}">{{ $data->judul }}</a></h3>
+                                <a href="{{ url('news/' . $data->slug) }}" class="half-line-btn">Read More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
-                        </div>
-                        <div class="blog-card_content">
-                            <div class="blog-meta">
-                                <a href="blog.html"><i class="far fa-user"></i>Alone Mask</a>
-                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>13 Jul. 2023</a>
-                            </div>
-                            <h3 class="blog-title border-bottom box-title"><a href="blog-details.html">Protecting your
-                                    assets, Securing your future.</a></h3>
-                            <a href="blog-details.html" class="half-line-btn">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog_1_3.jpg" alt="blog image">
-                        </div>
-                        <div class="blog-card_content">
-                            <div class="blog-meta">
-                                <a href="blog.html"><i class="far fa-user"></i>Alex Mack</a>
-                                <a href="blog.html"><i class="fal fa-calendar-alt"></i>14 Aug. 2023</a>
-                            </div>
-                            <h3 class="blog-title border-bottom box-title"><a href="blog-details.html">Be prepared for
-                                    anything With our insurance.</a></h3>
-                            <a href="blog-details.html" class="half-line-btn">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
         </div>
     </section>
     <!--==============================Footer Area==============================-->
     <footer class="footer-wrapper footer-layout4" data-bg-src="assets/img/bg/footer_bg_4.png">
-        <div class="container">
-            {{-- <div class="footer-top">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-xl-4 col-lg-5 text-lg-start text-center mb-lg-0 mb-40">
-                        <h3 class="text-white mb-0">Subscribe Our Newsletter Get update</h3>
-                    </div>
-                    <div class="col-lg-6">
-                        <form class="newsletter-form style2">
-                            <input class="form-control" type="email" placeholder="Email Address" required="">
-                            <button type="submit" class="th-btn style2">SUBSCRIBE</button>
-                        </form>
-                    </div>
-                </div>
-            </div> --}}
-        </div>
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
@@ -894,8 +449,9 @@
                                 <div class="about-logo">
                                     <a href="index.html"><img src="assets/img/logo.svg" alt="Insurax"></a>
                                 </div>
-                                <p class="about-text">Nam dictum, magna eu mattis dictum, nisl augue efficitur justo,
-                                    vel auctor magna </p>
+                                <p class="about-text">Berkomitmen untuk menyediakan produk herbal solutif terbaik dan
+                                    terus meningkatkan kualitasnya demi menyampaikan setiap kebaikan alam kepada
+                                    masyarakat. </p>
                                 <p class="footer-info">
                                     <i class="far fa-phone"></i>
                                     <a href="tel:+1145656865" class="info-box_link">+11 (456) 568 65</a>

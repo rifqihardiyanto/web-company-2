@@ -130,13 +130,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="popup-search-box d-none d-lg-block">
-        <button class="searchClose"><i class="fal fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fal fa-search"></i></button>
-        </form>
-    </div> --}}
+    
     <!--==============================Mobile Menu============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
@@ -156,7 +150,7 @@
                         <a href="{{ url('/products') }}">Product</a>
                     </li>
                     <li>
-                        <a href="{{ url('/blogs') }}">Blogs</a>
+                        <a href="{{ url('/news') }}">News</a>
                     </li>
                     <li>
                         <a href="{{ url('/contact') }}">Contact</a>
@@ -174,7 +168,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/logo.svg" alt="Insurax"></a>
+                                <a href="index.html"><img src="{{ asset('assets/img/logo.svg') }}" alt="Insurax"></a>
                             </div>
                         </div>
                         <div class="col-auto me-xxl-auto">
@@ -190,7 +184,7 @@
                                         <a href="{{ url('/products') }}">Product</a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('/blogs') }}">Blogs</a>
+                                        <a href="{{ url('/news') }}">News</a>
                                     </li>
                                     <li>
                                         <a href="{{ url('/contact') }}">Contact</a>
@@ -219,30 +213,15 @@
             </div>
         </div>
     </header>
+
+    
     
     @yield('content')
 
     <!--==============================Newsletter Area==============================-->
-    <div class="container">
-        <div class="bg-theme subscribe-sec ">
-            <div class="row justify-content-between">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="title-area mb-lg-0">
-                        <h2 class="sec-title text-white mb-0">Subscribe Our Newsletter <br class="d-md-block d-none">
-                            Get update</h2>
-                    </div>
-                </div>
-                <div class="col-xl-auto col-lg-6 align-self-center">
-                    <form class="newsletter-form">
-                        <input class="form-control" type="email" placeholder="Email Address" required="">
-                        <button type="submit" class="th-btn">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--==============================Footer Area==============================-->
-    <footer class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer_bg_2.png">
+    <footer class="footer-wrapper footer-layout2" data-bg-src="{{ asset('assets/img/bg/footer_bg_2.png') }}">
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
@@ -250,11 +229,9 @@
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="index.html"><img src="assets/img/logo.svg" alt="Insurax"></a>
+                                    <a href="index.html"><img src="{{ asset('assets/img/logo.svg') }}" alt="Insurax"></a>
                                 </div>
-                                <p class="about-text">There are several insurance solutions available to address
-                                    specific needs and risks that individuals or businesses may face. Best solution is
-                                    here.</p>
+                                <p class="about-text">Berkomitmen untuk menyediakan produk herbal solutif terbaik dan terus meningkatkan kualitasnya demi menyampaikan setiap kebaikan alam kepada masyarakat.</p>
                                 <div class="th-social">
                                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
                                     <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
