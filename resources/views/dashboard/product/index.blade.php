@@ -48,15 +48,17 @@
                                         name="nama_produk" />
                                 </div>
                             </div>
+                            <div class="row g-2 mb-3">
+                                <label for="formFile" class="form-label">Deskripsi 1</label>
+                                <input id="deskripsi_1" type="hidden" name="deskripsi_1">
+                                <trix-editor input="deskripsi_1"></trix-editor>
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <label for="formFile" class="form-label">Deskripsi 2</label>
+                                <input id="deskripsi_2" type="hidden" name="deskripsi_2">
+                                <trix-editor input="deskripsi_2"></trix-editor>
+                            </div>
                             <div class="row g-2">
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 1</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi_1"></textarea>
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 2</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi_2"></textarea>
-                                </div>
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Gambar (850 x 500)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_1" />

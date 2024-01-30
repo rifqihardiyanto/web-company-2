@@ -29,19 +29,8 @@
                             <div class="blog-meta">
                                 <i class="fa-light fa-calendar-days"></i> {{ $news->created_at->format('Y-m-d') }}
                             </div>
-                            <h2 class="blog-title">Family first with our insurance coverage</h2>
-                            <p>Proin dictum accumsan ante, vel cursus nulla congue quis. Aliquam a nisi pretium, facilisis
-                                arcu quis, placerat massa. Praesent ac odio quis massa commodo iaculis et at turpis. Aliquam
-                                ligula urna, lacinia eget egestas in, egestas nec ex. Donec finibus nulla in odio aliquet
-                                lacinia. Aenean vel tortor malesuada, elementum urna sit amet, pharetra elit. Nullam sed leo
-                                nec est eleifend accumsan. Donec rhoncus sem diam, eget euismod sapien tempor eu. Nunc
-                                venenatis justo id finibus condimentum.
-                            </p>
-                            <p>Quisque vel auctor ex, et ullamcorper orci. Cras consequat consequat tincidunt. Sed placerat
-                                faucibus velit imperdiet ultricies. Etiam lobortis enim quis justo viverra, sed sagittis
-                                diam semper. Etiam rutrum volutpat tellus, non viverra justo vulputate vitae. Nunc quis
-                                libero a nisi elementum condimentum dapibus vel nisi. Ut varius vestibulum mauris, ac
-                                viverra velit scelerisque eget. </p>
+                            <h2 class="blog-title">{{ $news->judul }}</h2>
+                            <p>{!! $news->isi_1 !!}</p>
                             <div class="row gy-30">
                                 <div class="col-sm-6">
                                     <div class="thumb"><img src="{{ asset('uploads/' . $news->gambar_2) }}" alt="img">

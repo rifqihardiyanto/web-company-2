@@ -37,11 +37,21 @@
                     @endforeach
 
 
-                    {{ $news->links() }}
+                    {{-- {{ $news->links() }} --}}
 
                 </div>
                 <div class="col-xxl-4 col-lg-5">
                     <aside class="sidebar-area">
+                        <div class="widget widget_nav_menu  ">
+                            <h3 class="widget_title">Kategori</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    @foreach ($categorynews as $data)
+                                        <li><a href="{{ url('news/' . $data->slug) }}">{{ $data->kategori }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
                         <div class="widget  ">
                             <h3 class="widget_title">Berita Terbaru</h3>
                             <div class="recent-post-wrap">

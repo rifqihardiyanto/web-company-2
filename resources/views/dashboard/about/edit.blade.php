@@ -15,14 +15,16 @@
     <div class="col-lg-4 col-md-6">
         <div class="mt-3">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary mb-3 modal-tambah" data-bs-toggle="modal" data-bs-target="#modal-form">
+            <button type="button" class="btn btn-primary mb-3 modal-tambah" data-bs-toggle="modal"
+                data-bs-target="#modal-form">
                 Edit @yield('title')
             </button>
 
             <!-- Modal -->
             <div class="modal modal-top fade" id="modal-form" tabindex="-1">
                 <div class="modal-dialog">
-                    <form action={{ route('about.update', $contact->id) }} class="form-about modal-content" enctype="multipart/form-data" method="POST">
+                    <form action={{ route('about.update', $about->id) }} class="form-about modal-content"
+                        enctype="multipart/form-data" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="modal-header">
@@ -33,56 +35,24 @@
                             <div class="row">
                                 <div class="col mb-3">
                                     <label for="nameSlideTop" class="form-label">Judul @yield('title')</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->judul }}" name="judul" />
+                                    <input type="text" class="form-control" placeholder="Enter Slider"
+                                        value="{{ $about->judul }}" name="judul" />
                                 </div>
                             </div>
                             <div class="row g-2">
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi</span>
-                                    <textarea class="form-control" value="{{ $contact->deskripsi }}" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi">{{ $contact->deskripsi }}</textarea>
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi Footer</span>
-                                    <textarea class="form-control" value="{{ $contact->deskripsi_footer }}" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi_footer">{{ $contact->deskripsi_footer  }}</textarea>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Gambar 1</label>
+                                    <input class="form-control" type="file" id="formFile" name="gambar_1" />
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">No Hp</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->no_hp }}" name="no_hp" />
-                                </div>
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">No Hp Support</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->no_support }}" name="no_support" />
-                                </div>
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">No Hp Konsultasi</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->no_konsultasi }}" name="no_konsultasi" />
+                            <div class="row g-2">
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Gambar 2</label>
+                                    <input class="form-control" type="file" id="formFile" name="gambar_2" />
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">Email</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->email }}" name="email" />
-                                </div>
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">Email Support</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->email_support }}" name="email_support" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">Lokasi</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $contact->lokasi }}" name="lokasi" />
-                                </div>
-                            </div>
+                            <input id="deskripsi" type="hidden" name="deskripsi" value="{{ $about->deskripsi }}">
+                            <trix-editor input="deskripsi"></trix-editor>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -96,37 +66,37 @@
         </div>
     </div>
 
-    <div class="card">
-        <h5 class="card-header">Dashboard | @yield('title')</h5>
-        <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead class="table-dark">
+    <div class="col-lg">
+        <div class="card mb-4">
+            <h5 class="card-header">Paragraph</h5>
+            <table class="table table-borderless">
+                <tbody>
                     <tr>
-                        <th>Judul @yield('title')</th>
-                        <th>Deskripsi</th>
-                        <th>Deskripsi Footer</th>
-                        <th>No Hp</th>
-                        <th>No Support</th>
-                        <th>No Konsultasi</th>
-                        <th>Email</th>
-                        <th>Email Support</th>
-                        <th>Lokasi</th>
-                        <th></th>
+                        <td class="align-middle"><small class="text-light fw-semibold">Judul</small></td>
+                        <td class="py-3">
+                            <p class="mb-0">
+                                {{ $about->judul }}
+                            </p>
+                        </td>
                     </tr>
-                </thead>
-                <tbody class="table-border-bottom-10">
-                        <tr>
-                            <td>{{ $contact->judul }}</td>
-                            <td style="white-space: normal !important;">{{ $contact->deskripsi }}</td>
-                            <td style="white-space: normal !important;">{{ $contact->deskripsi_footer }}</td>
-                            <td>{{ $contact->no_hp }}</td>
-                            <td>{{ $contact->no_support }}</td>
-                            <td>{{ $contact->no_konsultasi }}</td>
-                            <td>{{ $contact->email }}</td>
-                            <td>{{ $contact->email_support }}</td>
-                            <td>{{ $contact->lokasi }}</td>
-                        </tr>
-
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Deskripsi</small></td>
+                        <td class="py-3">
+                            <p class="mb-0">
+                                {!! $about->deskripsi !!}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Foto</small></td>
+                        <td>
+                            <img src="{{ asset('uploads/' . $about->gambar_1) }}" width="100" height="100"
+                                alt="" style="left: auto;">
+                            <img src="{{ asset('uploads/' . $about->gambar_2) }}" width="100" height="100"
+                                alt="" style="left: auto;">
+                        </td>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -134,4 +104,3 @@
     <!--/ Bootstrap Table with Header Dark -->
 
 @endsection
-

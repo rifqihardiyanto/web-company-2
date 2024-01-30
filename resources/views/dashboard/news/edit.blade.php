@@ -9,14 +9,16 @@
     <div class="col-lg-4 col-md-6">
         <div class="mt-3">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary mb-3 modal-tambah" data-bs-toggle="modal" data-bs-target="#modal-form">
+            <button type="button" class="btn btn-primary mb-3 modal-tambah" data-bs-toggle="modal"
+                data-bs-target="#modal-form">
                 Edit @yield('title')
             </button>
 
             <!-- Modal -->
             <div class="modal modal-top fade" id="modal-form" tabindex="-1">
                 <div class="modal-dialog">
-                    <form action={{ route('news.update', $news->id) }} class="form-slider modal-content" enctype="multipart/form-data" method="POST">
+                    <form action={{ route('news.update', $news->id) }} class="form-slider modal-content"
+                        enctype="multipart/form-data" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="modal-header">
@@ -27,18 +29,18 @@
                             <div class="row">
                                 <div class="col mb-3">
                                     <label for="nameSlideTop" class="form-label">Judul @yield('title')</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $news->judul }}" name="judul" />
+                                    <input type="text" class="form-control" placeholder="Enter Slider"
+                                        value="{{ $news->judul }}" name="judul" />
                                 </div>
                                 <div class="col mb-3" hidden>
                                     <label for="nameSlideTop" class="form-label">Judul @yield('title')</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $news->slug }}" name="slug" />
+                                    <input type="text" class="form-control" placeholder="Enter Slider"
+                                        value="{{ $news->slug }}" name="slug" />
                                 </div>
                                 <div class="col mb-3">
                                     <label for="nameSlideTop" class="form-label">Sub Judul @yield('title')</label>
-                                    <input type="text" class="form-control" placeholder="Enter Judul"
-                                        name="sub_judul" value="{{ $news->sub_judul }}"/>
+                                    <input type="text" class="form-control" placeholder="Enter Judul" name="sub_judul"
+                                        value="{{ $news->sub_judul }}" />
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -49,27 +51,6 @@
                                         <option value="{{ $data->id }}">{{ $data->kategori }}</option>
                                     @endforeach
                                 </select>
-                            </div>
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">Deskripsi</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $news->isi_1 }}" name="isi_1" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">Deskripsi</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $news->isi_2 }}" name="isi_2" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <label for="nameSlideTop" class="form-label">Deskripsi</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Enter Slider" value="{{ $news->isi_3 }}" name="isi_3" />
-                                </div>
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
@@ -89,6 +70,10 @@
                                     <input class="form-control" type="file" id="formFile" name="gambar_3" />
                                 </div>
                             </div>
+                            <input id="isi_1" type="hidden" name="isi_1" value="{{ $news->isi_1 }}">
+                            <trix-editor input="isi_1"></trix-editor>
+                            <input id="isi_3" type="hidden" name="isi_3" value="{{ $news->isi_3 }}">
+                            <trix-editor input="isi_3"></trix-editor>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -102,47 +87,56 @@
         </div>
     </div>
 
-    <div class="card">
-        <h5 class="card-header">Dashboard | @yield('title')</h5>
-        <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead class="table-dark">
+    <!-- Paragraph -->
+    <div class="col-lg">
+        <div class="card mb-4">
+            <h5 class="card-header">Paragraph</h5>
+            <table class="table table-borderless">
+                <tbody>
                     <tr>
-                        <th>Judul @yield('title')</th>
-                        <th>Sub Judul @yield('title')</th>
-                        <th>Kategori</th>
-                        <th>Deskripsi 1</th>
-                        <th>Deskripsi 2</th>
-                        <th>Deskripsi 3</th>
-                        <th>Gambar 1</th>
-                        <th>Gambar 2</th>
-                        <th>Gambar 3</th>
+                        <td class="align-middle"><small class="text-light fw-semibold">Judul Berita</small></td>
+                        <td class="py-3">
+                            <p class="mb-0">
+                                {{ $news->judul }}
+                            </p>
+                        </td>
                     </tr>
-                </thead>
-                <tbody class="table-border-bottom-10">
-                        <tr>
-                            <td>{{ $news->judul }}</td>
-                            <td>{{ $news->sub_judul }}</td>
-                            <td>{{ $news->categorynews->kategori }}</td>
-                            <td style="white-space: normal !important;">{{ $news->isi_1 }}</td>
-                            <td style="white-space: normal !important;">{{ $news->isi_2 }}</td>
-                            <td style="white-space: normal !important;">{{ $news->isi_3 }}</td>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Sub Judul Berita</small></td>
+                        <td class="py-3">
+                            <p class="mb-0">
+                                {{ $news->sub_judul }}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Isi Pertama</small></td>
+                        <td class="py-4">
+                            <p class="lead mb-0">
+                                {!! $news->isi_1 !!}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Muted text</small></td>
+                        <td class="py-3">
+                            <p class="text-muted mb-0">
+                                {!! $news->isi_3 !!}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Foto</small></td>
                             <td>
-                                <img src="{{ asset('uploads/' . $news->gambar_1) }}" width="100" height="100" alt="">
+                                <img src="{{ asset('uploads/' . $news->gambar_1) }}" width="100" height="100" alt="" style="left: auto;">
+                                <img src="{{ asset('uploads/' . $news->gambar_2) }}" width="100" height="100" alt="" style="left: auto;">
+                                <img src="{{ asset('uploads/' . $news->gambar_3) }}" width="100" height="100" alt="" style="left: auto;">
                             </td>
-                            <td>
-                                <img src="{{ asset('uploads/' . $news->gambar_2) }}" width="100" height="100" alt="">
-                            </td>
-                            <td>
-                                <img src="{{ asset('uploads/' . $news->gambar_3) }}" width="100" height="100" alt="">
-                            </td>
-                        </tr>
-
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <!--/ Bootstrap Table with Header Dark -->
 
 @endsection
-

@@ -108,43 +108,16 @@
     <div class="feature-area-2 overflow-hidden">
         <div class=" position-relative">
             <div class="img-half img-left feature-thumb-2">
-                <img src="{{ asset('assets/new_img/about2.jpg') }}" alt="img">
-                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img src="{{ asset('assets/new_img/about1.jpg') }}" alt="img"></div>
+                <img src="{{ asset('uploads/' . $about->gambar_1) }}" alt="img">
+                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img src="{{ asset('uploads/' . $about->gambar_2) }}" alt="img"></div>
             </div>
             <div class="container">
                 <div class="row justify-content-lg-end">
                     <div class="col-xl-5 col-lg-6">
                         <div class="title-area space-bottom mb-0 ms-xl-0 ms-lg-4 ms-0 text-center text-lg-start">
                             <span class="sub-title">Get to know Us</span>
-                            <h2 class="sec-title">Menjadi yang Terbaik untuk Memberikan yang Terbaik</h2>
-                            <p class="mt-30 mb-40">PT Niaga Wasilah Alkhair (Nashir) adalah perusahaan digital marketing yang berfokus pada distribusi produk herbal solutif. Didirikan pada tahun 2015, hingga saat ini mampu untuk terus melebarkan sayap bisnisnya di kancah nasional. Memegang teguh nilai "Sebaik-baik manusia adalah yang bermanfaat bagi orang lain", Nashir bertekad untuk selalu menghadirkan solusi terbaik untuk permasalahan kesehatan masyarakat.</p>
-                            <p class="mt-30 mb-40">Besarnya kepercayaan, membuat Nashir semakin yakin untuk terus melakukan riset dan mengembangkan inovasi-inovasi terbaru untuk menjawab setiap kebutuhan masyarakat khususnya dalam bidang kesehatan. Hingga sekarang, Nashir telah menjangkau jutaan customers dari dalam negeri maupun mancanegara.</p>
-                            {{-- <div class="feature-circle-wrap">
-                                <div class="feature-circle">
-                                    <div class="progressbar">
-                                        <div class="circle" data-percent="95">
-                                            <div class="circle-num">95%</div>
-                                        </div>
-                                        <div class="feature-circle_content">
-                                            <h5 class="feature-circle_title">Claim Success Rates</h5>
-                                            <p class="feature-circle_text">Pellentesque habitant morbi tristique
-                                                senectus et netus et malesuada fames ac</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="feature-circle">
-                                    <div class="progressbar">
-                                        <div class="circle" data-percent="90">
-                                            <div class="circle-num">90%</div>
-                                        </div>
-                                        <div class="feature-circle_content">
-                                            <h5 class="feature-circle_title">Clients Satisfied</h5>
-                                            <p class="feature-circle_text">Satisfied clients habitant morbi tristique
-                                                senectus et netus et malesuada fames</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
+                            <h2 class="sec-title" style="margin-bottom: 10px">{{ $about->judul }}</h2>
+                            <p class="mt-30 mb-40">{!! $about->deskripsi !!}</p>
                         </div>
 
                     </div>

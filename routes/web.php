@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PublicController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CategorynewsController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\NewsController;
@@ -30,6 +32,7 @@ Route::get('/category/{id}', [PublicController::class, 'category']);
 Route::get('/contact', [PublicController::class, 'contact']);
 Route::get('/news', [PublicController::class, 'news']);
 Route::get('/news/{news:slug}', [PublicController::class, 'single_news']);
+Route::get('/notfound', [PublicController::class, 'notfound'])->name('notfound');
 
 Route::middleware(['guest'])->group(function(){
     Route::get('login/dashboard/admin', [LoginController::class, 'login'])->name('login');
@@ -49,13 +52,17 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('dashboard/categorynews', CategorynewsController::class);
     // management
     Route::resource('dashboard/management', ManagementController::class);
-    // subcategory
+    // product
     Route::resource('dashboard/product', ProductController::class);
     // bestoffer
     Route::resource('dashboard/news', NewsController::class);
-    //produk
-    Route::resource('dashboard/about', ContactController::class);
+    //about
+    Route::resource('dashboard/about', AboutController::class);
+    //contact
+    Route::resource('dashboard/contact', ContactController::class);
     // Logo
     Route::resource('dashboard/logo', LogoController::class);
 
 });
+
+

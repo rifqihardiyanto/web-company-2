@@ -35,13 +35,11 @@
                             <div class="row">
                                 <div class="col mb-3">
                                     <label for="nameSlideTop" class="form-label">Judul @yield('title')</label>
-                                    <input type="text" class="form-control" placeholder="Enter Judul"
-                                        name="judul" />
+                                    <input type="text" class="form-control" placeholder="Enter Judul" name="judul" />
                                 </div>
                                 <div class="col mb-3">
                                     <label for="nameSlideTop" class="form-label">Sub Judul @yield('title')</label>
-                                    <input type="text" class="form-control" placeholder="Enter Judul"
-                                        name="sub_judul" />
+                                    <input type="text" class="form-control" placeholder="Enter Judul" name="sub_judul" />
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -54,18 +52,6 @@
                                 </select>
                             </div>
                             <div class="row g-2">
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 1</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="isi_1"></textarea>
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 2</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="isi_2"></textarea>
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 3</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="isi_3"></textarea>
-                                </div>
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Gambar (850 x 500)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_1" />
@@ -78,6 +64,16 @@
                                     <label for="formFile" class="form-label">Gambar (370 x 250)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_3" />
                                 </div>
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <label for="formFile" class="form-label">Deskripsi 1</label>
+                                <input id="isi_1" type="hidden" name="isi_1">
+                                <trix-editor input="isi_1"></trix-editor>
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <label for="formFile" class="form-label">Deskripsi 2</label>
+                                <input id="isi_3" type="hidden" name="isi_3">
+                                <trix-editor input="isi_3"></trix-editor>
                             </div>
                         </div>
                         <div class="modal-footer">

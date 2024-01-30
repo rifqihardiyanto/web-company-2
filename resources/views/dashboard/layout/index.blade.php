@@ -35,6 +35,8 @@
 
     <link rel="stylesheet" href="{{ asset('vendor/libs/apex-charts/apex-charts.css') }}" />
 
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+
     <!-- Page CSS -->
 
     <!-- Helpers -->
@@ -193,6 +195,8 @@
 
     <!-- Page JS -->
     <script src="{{ asset('js_dashboard/dashboards-analytics.js') }}"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

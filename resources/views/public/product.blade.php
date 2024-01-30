@@ -4,23 +4,19 @@
 
 @section('content')
 
-    <!--==============================
-        Breadcumb
-    ============================== -->
+    <!--==============================Breadcumb============================== -->
     <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black" data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">Portfolio Details</h1>
+                <h1 class="breadcumb-title">Produk Details</h1>
                 <ul class="breadcumb-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Portfolio Details</li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li>Produk Details</li>
                 </ul>
             </div>
         </div>
     </div>
-    <!--==============================
-    Project Area
-    ==============================-->
+    <!--==============================Project Area==============================-->
     <section class="space">
         <div class="container">
             <div class="row">
@@ -46,7 +42,7 @@
                         </li>
                             <li>
                                 <h6>Konsultasi:</h6>
-                                <a href=""><p>08764927427 </p></a>
+                                <a href="https://wa.me/{{ $contact->nomor_konsultasi }}" target="_blank"><p>{{ $contact->nomor_konsultasi }} </p></a>
                             </li>
                     </ul>
                 </div>
@@ -54,7 +50,7 @@
             <div class="page-single mt-30">
                 <div class="page-content">
                     <h2 class="page-title h3 mb-20">{{ $product->nama_produk }}</h2>
-                    <p>{{ $product->deskripsi_1 }}</p>
+                    <p>{!! $product->deskripsi_1 !!}</p>
 
                     <div class="row gy-30">
                         <div class="col-sm-4">
@@ -73,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="mt-40">{{ $product->deskripsi_2 }}</p>
+                    <p class="mt-40">{!! $product->deskripsi_2 !!}</p>
                 </div>
             </div>
 

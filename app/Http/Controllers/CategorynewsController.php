@@ -81,7 +81,7 @@ class CategorynewsController extends Controller
         $categorynews->kategori = $request->kategori;
         $categorynews->slug = $request->slug;
         $categorynews->save();
-        return redirect('dashboard/categorynews')->with('success', 'Data Berhasil Ditambah!');
+        return redirect('dashboard/categorynews')->with('success', 'Data Berhasil Diupdate!');
     }
 
     /**

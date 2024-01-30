@@ -105,7 +105,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{ url('about') }}" class="menu-link">
+                            <a href="{{ url('dashboard/about') }}" class="menu-link">
                                 <div data-i18n="Container">about</div>
                             </a>
                         </li>

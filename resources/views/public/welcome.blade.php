@@ -82,7 +82,7 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo.svg" alt="Insurax"></a>
+                <a href="index.html"><img src="assets/img/putih.png" alt="Insurax"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -120,7 +120,7 @@
                 <div class="row gx-0 justify-content-center justify-content-md-between align-items-center">
                     <div class="col-auto">
                         <div class="top-left">
-                            <p class="header-notice">Welcome to Our Insurance Company</p>
+                            <p class="header-notice">Welcome to PT Niaga Wasilah AlKhair</p>
                         </div>
                     </div>
                     <div class="col-auto d-none d-md-block">
@@ -130,11 +130,11 @@
                                     <div class="header-links">
                                         <ul>
                                             <li class="d-none d-lg-inline-block"><i class="fal fa-phone"></i><a
-                                                    href="tel:+1044123456789">+1 (044) 123 456 789</a></li>
+                                                    href="tel:+1044123456789">{{ $contact->nomor_support }}</a></li>
                                             <li class="d-none d-xxl-inline-block"><i
                                                     class="fal fa-location-dot"></i>27 Division St, New York, USA</li>
                                             <li><i class="fal fa-envelope"></i><a
-                                                    href="mailto:info@insurax.com">info@insurax.com</a></li>
+                                                    href="mailto:info@insurax.com">{{ $contact->email_support }}</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@
                     <div class="row gx-0 justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/logo-white.svg" alt="Insurax"></a>
+                                <a href="index.html"><img src="assets/img/putih.png" alt="Insurax"></a>
                             </div>
                         </div>
                         <div class="col-auto">
@@ -187,14 +187,6 @@
                                         <button type="button" class="th-menu-toggle d-inline-block d-lg-none"><i
                                                 class="far fa-bars"></i></button>
                                     </div>
-                                    {{-- <div class="col-auto d-none d-xxl-block">
-                                        <div class="header-button">
-                                            <button type="button" class="icon-btn style2 searchBoxToggler"><i
-                                                    class="far fa-search"></i></button>
-                                            <a href="#" class="simple-icon style2 sideMenuToggler"><i
-                                                    class="fa-solid fa-grid"></i></a>
-                                        </div>
-                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -246,10 +238,10 @@
                 <div class="col-xxl-7 col-lg-6 mb-lg-0 mb-40">
                     <div class="about-thumb4">
                         <div class="img1">
-                            <img class="tilt-active" src="assets/img/normal/about_4-1.png" alt="About">
+                            <img class="tilt-active" src="{{ asset('assets/new_img/about_2-1.jpg') }}" alt="About">
                         </div>
                         <div class="img2">
-                            <img class="tilt-active" src="assets/img/normal/about_4-2.png" alt="About">
+                            <img class="tilt-active" src="{{ asset('assets/new_img/about_2-2.jpg') }}" alt="About">
                             <a href="https://www.youtube.com/watch?v=2ka0niUCAWA" class="play-btn popup-video"><i
                                     class="fa-sharp fa-solid fa-play"></i></a>
                         </div>
@@ -262,15 +254,12 @@
                         <span class="sub-title">
                             Tentang Nashir
                         </span>
-                        <h2 class="sec-title">Perdagangan Menjadi Perantara Kebaikan</h2>
+                        <h2 class="sec-title">PT Niaga Wasilah AlKhair</h2>
                     </div>
-                    <p class="mt-n1 mb-30">PT Niaga Wasilah Alkhair (Nashir) selalu mengedepankan produk berkualitas
-                        tinggi, teruji laboratorium berstandar, dan memberikan kepuasan konsumen. Menjadikan setiap
-                        produk Nashir pilihan utama bagi masyarakat dalam mengatasi setiap masalah kesehatan yang
-                        dihadapi.</p>
+                    <p class="mt-n1 mb-30">PT Niaga Wasilah Al Khair (Nashir) merupakan perusahaan digital marketing terkemuka yang berfokus pada pendistribusian bahan herbal tradisional. Perusahaan ini telah mengambil banyak peran dalam meningkatkan kepercayaan masyarakat terkait manfaat bahan herbal.</p>
                     <div class="row gx-30 align-items-center">
                         <div class="col-sm-auto mb-sm-0 mb-4">
-                            <div class="thumb"><img src="assets/img/normal/about_4-3.png" alt="img"></div>
+                            <div class="thumb"><img src="{{ asset('assets/new_img/about_2-3.jpg') }}" alt="img"></div>
                         </div>
                         <div class="col-sm-auto">
                             <div class="checklist">
@@ -321,34 +310,14 @@
                         <div class="shape-mockup spin d-none d-xl-block" data-left="-125px" data-top="-63px">
                             <img src="assets/img/shape/wcu-thumb-2-shape.png" alt="shape">
                         </div>
-                        <img class="tilt-active" src="assets/img/normal/wcu-thumb-2.png" alt="image">
+                        <img class="tilt-active" src="{{ asset('assets/new_img/about_2-4.jpg') }}" alt="image">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6">
                     <div class="title-area mb-30">
-                        <span class="sub-title">Our Achivement</span>
-                        <h2 class="sec-title">We protect you today, and tomorrow too.</h2>
+                        <h2 class="sec-title">Perdagangan Menjadi Perantara Kebaikan</h2>
                     </div>
-                    <p class="mt-n2 mb-30">Aenean non arcu ut libero molestie aliquet at a neque. Donec dignissim dui
-                        ipsum, vitae fermentum mauris gravida vitae.</p>
-                    <div class="wcu-skill-wrap" data-bg-src="assets/img/bg/wcu-skill-wrap-bg.png">
-                        <div class="skill-feature">
-                            <h5 class="skill-feature_title">Claim Success Rates</h5>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 94%;">
-                                    <div class="progress-value">94%</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-feature">
-                            <h5 class="skill-feature_title">Quality Product</h5>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 95%;">
-                                    <div class="progress-value">95%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="mt-n2 mb-30">PT Niaga Wasilah Alkhair (Nashir) selalu mengedepankan produk berkualitas tinggi, teruji laboratorium berstandar, dan memberikan kepuasan konsumen. Menjadikan setiap produk Nashir pilihan utama bagi masyarakat dalam mengatasi setiap masalah kesehatan yang dihadapi.</p>
                 </div>
             </div>
         </div>
@@ -359,22 +328,22 @@
         <div class="cta-sec5 text-lg-start text-center" data-bg-src="assets/img/bg/cta_bg_4.png">
             <div class="row gy-5 justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-auto order-lg-2">
-                    <a href="tel:+111458586558" class="cta-icon play-btn"><img src="assets/img/icon/cta-icon-1.svg"
+                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="assets/img/icon/cta-icon-1.svg"
                             alt="img"></a>
                 </div>
                 <div class="col-lg-auto order-lg-1">
                     <div class="cta-info-wrap">
                         <h3 class="mb-10 fw-semibold">
-                            <a class="text-white" href="tel:+111458586558">+1112 (566) 854 - 69</a>
+                            <a class="text-white" href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a>
                         </h3>
                         <h5 class="mb-0 fw-medium">
-                            <a class="text-white" href="mailto:insurax.help@gmail.com">insurax.help@gmail.com</a>
+                            <p class="text-white">{{ $contact->email_support }}</p>
                         </h5>
                     </div>
                 </div>
                 <div class="col-lg-auto order-lg-3">
                     <div class="btn-group justify-content-center">
-                        <a href="service.html" class="th-btn style3">Contact With Us<i
+                        <a href="{{ url('/contact') }}" class="th-btn style3">Contact With Us<i
                                 class="far fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -382,22 +351,17 @@
         </div>
     </div>
     <!--==============================Video Area==============================-->
-    <div class="video-sec3 " data-bg-src="assets/img/bg/video-bg4-1.png" data-overlay="title" data-opacity="8">
+    <div class="video-sec3 " data-bg-src="{{ asset('assets/new_img/home_bg-2.jpg') }}" data-overlay="title" data-opacity="8">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="title-area mb-0 text-lg-start text-center">
-                        <span class="sub-title style3">We Create Great achievement</span>
-                        <h2 class="sec-title style2 text-white">Insurance that gives you Peace of mind always.</h2>
-                    </div>
-                    <div class="btn-wrap mt-50">
-                        <a href="contact.html" class="th-btn style2 mt-0">Read More<i
-                                class="far fa-arrow-right"></i></a>
+                        <span class="sub-title style3">Cerita panjang</span>
+                        <h2 class="sec-title style2 text-white">Perjuangan berat adalah penerjemah mimpi menjadi kenyataan.</h2>
                     </div>
                 </div>
                 <div class="col-lg-3 align-self-center text-lg-end text-center mt-lg-0 mt-5">
-                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style4 popup-video"><i
-                            class="fa-sharp fa-solid fa-play"></i></a>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8cGn25Jc5Y8?si=ozKMNM6pfNTYaeN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -439,122 +403,7 @@
         </div>
     </section>
     <!--==============================Footer Area==============================-->
-    <footer class="footer-wrapper footer-layout4" data-bg-src="assets/img/bg/footer_bg_4.png">
-        <div class="widget-area">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 col-xxl-3 col-xl-3">
-                        <div class="widget footer-widget">
-                            <div class="th-widget-about">
-                                <div class="about-logo">
-                                    <a href="index.html"><img src="assets/img/logo.svg" alt="Insurax"></a>
-                                </div>
-                                <p class="about-text">Berkomitmen untuk menyediakan produk herbal solutif terbaik dan
-                                    terus meningkatkan kualitasnya demi menyampaikan setiap kebaikan alam kepada
-                                    masyarakat. </p>
-                                <p class="footer-info">
-                                    <i class="far fa-phone"></i>
-                                    <a href="tel:+1145656865" class="info-box_link">+11 (456) 568 65</a>
-                                </p>
-                                <p class="footer-info">
-                                    <i class="far fa-envelope"></i>
-                                    <a href="mailto:info.support@gmail.com"
-                                        class="info-box_link">info.support@gmail.com</a>
-                                </p>
-                                <p class="footer-info">
-                                    <i class="far fa-location-dot"></i>
-                                    18013 Northridge, United States
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-auto">
-                        <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Company</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="service.html">Last Services</a></li>
-                                    <li><a href="portfolio.html">Photos Gallery</a></li>
-                                    <li><a href="blog.html">Blog Standard</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-2">
-                        <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Services</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
-                                    <li><a href="service-details.html">Home Insurance</a></li>
-                                    <li><a href="service-details.html">Business Insurance</a></li>
-                                    <li><a href="service-details.html">Family Insurance</a></li>
-                                    <li><a href="service-details.html">Health Insurance</a></li>
-                                    <li><a href="service-details.html">Vehicle Insurance</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3">
-                        <div class="widget footer-widget">
-                            <h3 class="widget_title">Recent Post</h3>
-                            <div class="recent-post-wrap">
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.png"
-                                                alt="Blog Image"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="recent-post-meta">
-                                            <a href="blog.html">21 March, 2023</a>
-                                        </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Be
-                                                prepared for anything With our insurance.</a></h4>
-
-                                    </div>
-                                </div>
-                                <div class="recent-post">
-                                    <div class="media-img">
-                                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.png"
-                                                alt="Blog Image"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="recent-post-meta">
-                                            <a href="blog.html">22 June, 2023</a>
-                                        </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Trust
-                                                us to protect what you love most.</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-wrap bg-black border-0">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-auto">
-                        <p class="copyright-text text-center pb-md-0 pb-4"><i class="fal fa-copyright"></i> 2023 All
-                            Rights Reserved By <a href="#">Insurax.</a></p>
-                    </div>
-                    <div class="col-auto">
-                        <div class="footer-links">
-                            <ul>
-                                <li><a href="contact.html">Privacy </a></li>
-                                <li><a href="contact.html">Terms & Condition </a></li>
-                                <li><a href="about.html">About Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('layout.footer')
 
     <!--********************************Code End  Here******************************** -->
 

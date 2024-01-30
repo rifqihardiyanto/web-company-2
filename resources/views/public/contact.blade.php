@@ -34,8 +34,8 @@
                             <div class="media-body">
                                 <h4 class="contact-info_title h6">Phone</h4>
                                 <span class="contact-info_text">
-                                    <a href="tel:01145658698">+011 (456) 586 98</a>
-                                    <a href="tel:22256898">+222 (945) 568 98</a>
+                                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a>
+                                    <a href="https://wa.me/{{ $contact->nomor_konsultasi }}" target="_blank">{{ $contact->nomor_konsultasi }}</a>
                                 </span>
                             </div>
                         </div>
@@ -46,8 +46,7 @@
                             <div class="media-body">
                                 <h4 class="contact-info_title h6">Write Email</h4>
                                 <span class="contact-info_text">
-                                    <a href="mailto:info.example@gmail.com">supportgmail.com</a>
-                                    <a href="mailto:info.@gmail.com">info.@gmail.com</a>
+                                    {{ $contact->email_support }}
                                 </span>
                             </div>
                         </div>
@@ -58,17 +57,14 @@
                             <div class="media-body">
                                 <h4 class="contact-info_title h6">Location</h4>
                                 <span class="contact-info_text">
-                                    3891 Ranchview Dr. Richardson, <br>
-                                    California 62639
+                                    {{ $contact->lokasi }}
                                 </span>
                             </div>
                         </div>
                         <h6 class="social-info_title">Follow Us</h6>
                         <div class="th-social style-white">
                             <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.behance.com/"><i class="fa-solid fa-link"></i></a>
+                            <a href="{{ $contact->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
