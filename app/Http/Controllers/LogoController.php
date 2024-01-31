@@ -12,7 +12,8 @@ class LogoController extends Controller
      */
     public function index()
     {
-        //
+        $logo = Logo::first();
+        return view('dashboard.logo.edit', compact('logo'));
     }
 
     /**
@@ -52,7 +53,37 @@ class LogoController extends Controller
      */
     public function update(Request $request, Logo $logo)
     {
-        //
+        if ($request->hasFile('logo')) {
+            // Delete the old image if it exists
+            if ($logo->logo) {
+                $oldImagePath = public_path('uploads/' . $logo->logo);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+
+            // Upload the new image
+            $nama_gambar = time() . '.' . $request->logo->getClientOriginalExtension();
+            $request->logo->move(public_path('uploads/'), $nama_gambar);
+            $logo->logo = $nama_gambar;
+        }
+        if ($request->hasFile('logo_title')) {
+            // Delete the old image if it exists
+            if ($logo->logo_title) {
+                $oldImagePath = public_path('uploads/' . $logo->logo_title);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+
+            // Upload the new image
+            $nama_gambar = time() . '.' . $request->logo_title->getClientOriginalExtension();
+            $request->logo_title->move(public_path('uploads/'), $nama_gambar);
+            $logo->logo_title = $nama_gambar;
+        }
+
+        $logo->save();
+        return redirect('dashboard/logo')->with('success' , 'Data Berhasil Diedit!');
     }
 
     /**

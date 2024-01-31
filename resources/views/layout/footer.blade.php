@@ -13,7 +13,7 @@
                     <div class="widget footer-widget">
                         <div class="th-widget-about">
                             <div class="about-logo">
-                                <a href="index.html"><img src="{{ asset('assets/img/putih.png') }}" alt="Insurax"></a>
+                                <a href="{{ url('') }}"><img src="{{ asset('uploads/' . $logo->logo) }}" alt="Nashir"></a>
                             </div>
                             <p class="about-text">Berkomitmen untuk menyediakan produk herbal solutif terbaik dan terus
                                 meningkatkan kualitasnya demi menyampaikan setiap kebaikan alam kepada masyarakat.</p>

@@ -80,15 +80,21 @@
                             </a>
                         </li>
                         <li class="menu-item">
+                            <a href="{{ url('dashboard/product') }}" class="menu-link">
+                                <div data-i18n="Fluid">Data Produk</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
                             <a href="{{ url('dashboard/categorynews') }}" class="menu-link">
                                 <div data-i18n="Without menu">Data Kategori News</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{ url('dashboard/product') }}" class="menu-link">
-                                <div data-i18n="Fluid">Data Produk</div>
+                            <a href="{{ url('dashboard/news') }}" class="menu-link">
+                                <div data-i18n="Container">News</div>
                             </a>
                         </li>
+                        
                         <li class="menu-item">
                             <a href="{{ url('dashboard/slider') }}" class="menu-link">
                                 <div data-i18n="Container">Data Slider</div>
@@ -99,18 +105,19 @@
                                 <div data-i18n="Container">Data Management</div>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <a href="{{ url('dashboard/news') }}" class="menu-link">
-                                <div data-i18n="Container">News</div>
-                            </a>
-                        </li>
+                        
                         <li class="menu-item">
                             <a href="{{ url('dashboard/about') }}" class="menu-link">
-                                <div data-i18n="Container">about</div>
+                                <div data-i18n="Container">About</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{ url('logo') }}" class="menu-link">
+                            <a href="{{ url('dashboard/contact') }}" class="menu-link">
+                                <div data-i18n="Container">Contact</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{ url('dashboard/logo') }}" class="menu-link">
                                 <div data-i18n="Container">Logo</div>
                             </a>
                         </li>

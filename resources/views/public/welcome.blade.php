@@ -2,10 +2,12 @@
 <html class="no-js" lang="zxx">
 
 <head>
+    @php
+        $logo = App\Models\Logo::first();
+    @endphp
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>PT Niaga Wasilah Al Khair</title>
-    <meta name="author" content="Insurax">
     <meta name="description" content="PT Niaga Wasilah Al Khair">
     <meta name="keywords" content="PT Niaga Wasilah Al Khair">
     <meta name="robots" content="PT Niaga Wasilah Al Khair">
@@ -14,31 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/img/favicons/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/img/favicons/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/img/favicons/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/favicons/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/img/favicons/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/img/favicons/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/favicons/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/img/favicons/apple-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicons/apple-icon-180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192"
-        href="{{ asset('assets/img/favicons/android-icon-192x192.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/img/favicons/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('assets/img/favicons/manifest.json') }}">
+    <link rel="icon" type="image/png" href="{{ asset('uploads/' . $logo->logo_title) }}"/>
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('uploads/' . $logo->logo_title) }}">
     <meta name="theme-color" content="#ffffff">
 
     <!--==============================Google Fonts============================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!--==============================All CSS File============================== -->
     <!-- Bootstrap -->
@@ -82,7 +68,7 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/putih.png" alt="Insurax"></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('uploads/' . $logo->logo) }}" alt="Nashir"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -129,12 +115,9 @@
                                 <div class="col-auto">
                                     <div class="header-links">
                                         <ul>
-                                            <li class="d-none d-lg-inline-block"><i class="fal fa-phone"></i><a
-                                                    href="tel:+1044123456789">{{ $contact->nomor_support }}</a></li>
-                                            <li class="d-none d-xxl-inline-block"><i
-                                                    class="fal fa-location-dot"></i>27 Division St, New York, USA</li>
-                                            <li><i class="fal fa-envelope"></i><a
-                                                    href="mailto:info@insurax.com">{{ $contact->email_support }}</a></li>
+                                            <li class="d-none d-lg-inline-block"><i class="fal fa-phone"></i><a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a></li>
+                                            <li class="d-none d-xxl-inline-block"><i class="fal fa-location-dot"></i>{{ $contact->lokasi }}</li>
+                                            <li><i class="fal fa-envelope"></i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@mynashir.com" target="_blank">{{ $contact->email_support }}</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -158,7 +141,7 @@
                     <div class="row gx-0 justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/putih.png" alt="Insurax"></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('uploads/' . $logo->logo) }}" alt="Nashir"></a>
                             </div>
                         </div>
                         <div class="col-auto">
@@ -308,7 +291,7 @@
                 <div class="col-xl-7 col-lg-6">
                     <div class="wcu-thumb2">
                         <div class="shape-mockup spin d-none d-xl-block" data-left="-125px" data-top="-63px">
-                            <img src="assets/img/shape/wcu-thumb-2-shape.png" alt="shape">
+                            <img src="{{ asset('assets/img/shape/wcu-thumb-2-shape.png') }}" alt="shape">
                         </div>
                         <img class="tilt-active" src="{{ asset('assets/new_img/about_2-4.jpg') }}" alt="image">
                     </div>
@@ -325,10 +308,10 @@
 
     <!--==============================Cta Area==============================-->
     <div class="container">
-        <div class="cta-sec5 text-lg-start text-center" data-bg-src="assets/img/bg/cta_bg_4.png">
+        <div class="cta-sec5 text-lg-start text-center" data-bg-src="{{ asset('assets/img/bg/cta_bg_4.png') }}">
             <div class="row gy-5 justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-auto order-lg-2">
-                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="assets/img/icon/cta-icon-1.svg"
+                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="{{ asset('assets/img/icon/cta-icon-1.svg') }}"
                             alt="img"></a>
                 </div>
                 <div class="col-lg-auto order-lg-1">

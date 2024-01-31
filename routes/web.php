@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LogoController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CategorynewsController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ManagementController;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CategorynewsController;
 
 /*
 |--------------------------------------------------------------------------

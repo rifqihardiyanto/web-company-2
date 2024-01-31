@@ -32,20 +32,14 @@
                         <div class="modal-body">
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Logo Header</label>
-                                    <input class="form-control" type="file" id="formFile" name="logo_header" />
+                                    <label for="formFile" class="form-label">Logo</label>
+                                    <input class="form-control" type="file" id="formFile" name="logo" />
                                 </div>
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Logo Header Mobile</label>
-                                    <input class="form-control" type="file" id="formFile" name="logo_header_mobile" />
-                                </div>
-                            </div>
-                            <div class="row g-2">
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Logo Footer</label>
-                                    <input class="form-control" type="file" id="formFile" name="logo_footer" />
+                                    <label for="formFile" class="form-label">Logo Title</label>
+                                    <input class="form-control" type="file" id="formFile" name="logo_title" />
                                 </div>
                             </div>
                         </div>
@@ -67,22 +61,18 @@
             <table class="table">
                 <thead class="table-dark">
                     <tr>
-                        <th>Logo Header</th>
-                        <th>Logo Header Mobile</th>
-                        <th>Logo Footer</th>
+                        <th>Logo</th>
+                        <th>Logo Title</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-10">
                         <tr>
                             <td>
-                                <img src="{{ asset('uploads/' . $logo->logo_header) }}" width="100" height="100" alt="">
+                                <img src="{{ asset('uploads/' . $logo->logo) }}" width="100" height="100" alt="">
                             </td>
                             <td>
-                                <img src="{{ asset('uploads/' . $logo->logo_header_mobile) }}" width="100" height="100" alt="">
-                            </td>
-                            <td>
-                                <img src="{{ asset('uploads/' . $logo->logo_footer) }}" width="100" height="100" alt="">
+                                <img src="{{ asset('uploads/' . $logo->logo_title) }}" width="100" height="100" alt="">
                             </td>
                         </tr>
 
