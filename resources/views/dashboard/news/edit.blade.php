@@ -54,19 +54,19 @@
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Gambar 1</label>
+                                    <label for="formFile" class="form-label">Gambar 1 (850 x 500)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_1" />
                                 </div>
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Gambar 2</label>
+                                    <label for="formFile" class="form-label">Gambar 2 (370 x 250)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_2" />
                                 </div>
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Gambar 3</label>
+                                    <label for="formFile" class="form-label">Gambar 3 (370 x 250)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_3" />
                                 </div>
                             </div>

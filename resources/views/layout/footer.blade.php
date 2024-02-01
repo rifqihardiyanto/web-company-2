@@ -96,15 +96,14 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-auto">
-                    <p class="copyright-text text-center pb-md-0 pb-4"><i class="fal fa-copyright"></i> 2023 All
-                        Rights Reserved By <a href="#">Insurax.</a></p>
+                    <p class="copyright-text text-center pb-md-0 pb-4"><i class="fal fa-copyright"></i> 2023 PT Niaga Wasilah AlKhair</p>
                 </div>
                 <div class="col-auto">
                     <div class="footer-links">
                         <ul>
-                            <li><a href="contact.html">Privacy </a></li>
-                            <li><a href="contact.html">Terms & Condition</a></li>
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Privacy </a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="{{ url('/about') }}">About Us</a></li>
                         </ul>
                     </div>
                 </div>

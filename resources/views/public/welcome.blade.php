@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/png" href="{{ asset('uploads/' . $logo->logo_title) }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('uploads/' . $logo->logo_title) }}" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('uploads/' . $logo->logo_title) }}">
     <meta name="theme-color" content="#ffffff">
@@ -24,7 +24,9 @@
     <!--==============================Google Fonts============================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <!--==============================All CSS File============================== -->
     <!-- Bootstrap -->
@@ -45,13 +47,11 @@
 
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+    <![endif]-->
 
 
 
-    <!--********************************
-   Code Start From Here
- ******************************** -->
+    <!--********************************Code Start From Here******************************** -->
 
 
 
@@ -91,13 +91,6 @@
             </div>
         </div>
     </div>
-    <div class="popup-search-box d-none d-lg-block">
-        <button class="searchClose"><i class="fal fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fal fa-search"></i></button>
-        </form>
-    </div>
 
     <!--==============================Header Area==============================-->
     <header class="th-header header-layout8">
@@ -115,18 +108,15 @@
                                 <div class="col-auto">
                                     <div class="header-links">
                                         <ul>
-                                            <li class="d-none d-lg-inline-block"><i class="fal fa-phone"></i><a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a></li>
-                                            <li class="d-none d-xxl-inline-block"><i class="fal fa-location-dot"></i>{{ $contact->lokasi }}</li>
-                                            <li><i class="fal fa-envelope"></i><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@mynashir.com" target="_blank">{{ $contact->email_support }}</a></li>
+                                            <li class="d-none d-lg-inline-block"><i class="fal fa-phone"></i><a
+                                                    href="https://wa.me/{{ $contact->nomor_support }}"
+                                                    target="_blank">{{ $contact->nomor_support }}</a></li>
+                                            <li class="d-none d-xxl-inline-block"><i
+                                                    class="fal fa-location-dot"></i>{{ $contact->lokasi }}</li>
+                                            <li><i class="fal fa-envelope"></i><a
+                                                    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@mynashir.com"
+                                                    target="_blank">{{ $contact->email_support }}</a></li>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="header-social">
-                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +131,8 @@
                     <div class="row gx-0 justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('uploads/' . $logo->logo) }}" alt="Nashir"></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('uploads/' . $logo->logo) }}"
+                                        alt="Nashir"></a>
                             </div>
                         </div>
                         <div class="col-auto">
@@ -189,13 +180,12 @@
                         <img src="{{ url('assets/img/update1/hero/hero_overlay_8.png') }}" alt="Hero Image">
                     </div>
                     <div class="hero-8-thumb" data-ani="slideinleft" data-ani-delay="0.05s"
-                        data-mask-src="assets/img/hero/home3-mask.png">
+                        data-mask-src="{{ asset('assets/img/hero/home3-mask.png') }}">
                         <img src="{{ asset('uploads/' . $data->gambar) }}" alt="img">
                     </div>
                     <div class="container">
                         <div class="hero-style8">
-                            <span class="hero-subtitle" data-ani="slideindown"
-                                data-ani-delay="0.5s">{{ $data->judul }}</span>
+                            <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">{{ $data->judul }}</span>
                             <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">
                                 {{ $data->sub_judul }}</h1>
                             <p class="hero-text" data-ani="slideinup" data-ani-delay="0.1s">{{ $data->deskripsi }}
@@ -221,10 +211,12 @@
                 <div class="col-xxl-7 col-lg-6 mb-lg-0 mb-40">
                     <div class="about-thumb4">
                         <div class="img1">
-                            <img class="tilt-active" src="{{ asset('assets/new_img/about_2-1.jpg') }}" alt="About">
+                            <img class="tilt-active" src="{{ asset('assets/new_img/about_2-1.jpg') }}"
+                                alt="About">
                         </div>
                         <div class="img2">
-                            <img class="tilt-active" src="{{ asset('assets/new_img/about_2-2.jpg') }}" alt="About">
+                            <img class="tilt-active" src="{{ asset('assets/new_img/about_2-2.jpg') }}"
+                                alt="About">
                             <a href="https://www.youtube.com/watch?v=2ka0niUCAWA" class="play-btn popup-video"><i
                                     class="fa-sharp fa-solid fa-play"></i></a>
                         </div>
@@ -239,10 +231,14 @@
                         </span>
                         <h2 class="sec-title">PT Niaga Wasilah AlKhair</h2>
                     </div>
-                    <p class="mt-n1 mb-30">PT Niaga Wasilah Al Khair (Nashir) merupakan perusahaan digital marketing terkemuka yang berfokus pada pendistribusian bahan herbal tradisional. Perusahaan ini telah mengambil banyak peran dalam meningkatkan kepercayaan masyarakat terkait manfaat bahan herbal.</p>
+                    <p class="mt-n1 mb-30">PT Niaga Wasilah Al Khair (Nashir) merupakan perusahaan digital marketing
+                        terkemuka yang berfokus pada pendistribusian bahan herbal tradisional. Perusahaan ini telah
+                        mengambil banyak peran dalam meningkatkan kepercayaan masyarakat terkait manfaat bahan herbal.
+                    </p>
                     <div class="row gx-30 align-items-center">
                         <div class="col-sm-auto mb-sm-0 mb-4">
-                            <div class="thumb"><img src="{{ asset('assets/new_img/about_2-3.jpg') }}" alt="img"></div>
+                            <div class="thumb"><img src="{{ asset('assets/new_img/about_2-3.jpg') }}"
+                                    alt="img"></div>
                         </div>
                         <div class="col-sm-auto">
                             <div class="checklist">
@@ -276,7 +272,8 @@
                 @foreach ($categories as $data)
                     <div class="col-auto">
                         <div class="brand-box">
-                            <a href="{{ url('category/' . $data->id) }}"><img src="{{ asset('uploads/' . $data->gambar) }}" alt="Brand Logo"></a>
+                            <a href="{{ url('category/' . $data->id) }}"><img
+                                    src="{{ asset('uploads/' . $data->gambar) }}" alt="Brand Logo"></a>
                         </div>
                     </div>
                 @endforeach
@@ -300,7 +297,10 @@
                     <div class="title-area mb-30">
                         <h2 class="sec-title">Perdagangan Menjadi Perantara Kebaikan</h2>
                     </div>
-                    <p class="mt-n2 mb-30">PT Niaga Wasilah Alkhair (Nashir) selalu mengedepankan produk berkualitas tinggi, teruji laboratorium berstandar, dan memberikan kepuasan konsumen. Menjadikan setiap produk Nashir pilihan utama bagi masyarakat dalam mengatasi setiap masalah kesehatan yang dihadapi.</p>
+                    <p class="mt-n2 mb-30">PT Niaga Wasilah Alkhair (Nashir) selalu mengedepankan produk berkualitas
+                        tinggi, teruji laboratorium berstandar, dan memberikan kepuasan konsumen. Menjadikan setiap
+                        produk Nashir pilihan utama bagi masyarakat dalam mengatasi setiap masalah kesehatan yang
+                        dihadapi.</p>
                 </div>
             </div>
         </div>
@@ -311,13 +311,12 @@
         <div class="cta-sec5 text-lg-start text-center" data-bg-src="{{ asset('assets/img/bg/cta_bg_4.png') }}">
             <div class="row gy-5 justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-auto order-lg-2">
-                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="{{ asset('assets/img/icon/cta-icon-1.svg') }}"
-                            alt="img"></a>
+                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="{{ asset('assets/img/icon/cta-icon-1.svg') }}" alt="img"></a>
                 </div>
                 <div class="col-lg-auto order-lg-1">
                     <div class="cta-info-wrap">
                         <h3 class="mb-10 fw-semibold">
-                            <a class="text-white" href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a>
+                            <a class="text-white" href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">Admin Nashir</a>
                         </h3>
                         <h5 class="mb-0 fw-medium">
                             <p class="text-white">{{ $contact->email_support }}</p>
@@ -334,17 +333,23 @@
         </div>
     </div>
     <!--==============================Video Area==============================-->
-    <div class="video-sec3 " data-bg-src="{{ asset('assets/new_img/home_bg-2.jpg') }}" data-overlay="title" data-opacity="8">
+    <div class="video-sec3 " data-bg-src="{{ asset('assets/new_img/home_bg-2.jpg') }}" data-overlay="title"
+        data-opacity="8">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="title-area mb-0 text-lg-start text-center">
                         <span class="sub-title style3">Cerita panjang</span>
-                        <h2 class="sec-title style2 text-white">Perjuangan berat adalah penerjemah mimpi menjadi kenyataan.</h2>
+                        <h2 class="sec-title style2 text-white">Perjuangan berat adalah penerjemah mimpi menjadi
+                            kenyataan.</h2>
                     </div>
                 </div>
                 <div class="col-lg-3 align-self-center text-lg-end text-center mt-lg-0 mt-5">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8cGn25Jc5Y8?si=ozKMNM6pfNTYaeN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/8cGn25Jc5Y8?si=ozKMNM6pfNTYaeN9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>

@@ -5,9 +5,10 @@
 @section('content')
 
     <!--==============================
-        Breadcumb
-    ============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black" data-opacity="8">
+                Breadcumb
+            ============================== -->
+    <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black"
+        data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Contact Us</h1>
@@ -19,8 +20,8 @@
         </div>
     </div>
     <!--==============================
-    Contact Area
-    ==============================-->
+            Contact Area
+            ==============================-->
     <div class="space-top">
         <div class="container">
             <div class="row gy-20">
@@ -34,8 +35,10 @@
                             <div class="media-body">
                                 <h4 class="contact-info_title h6">Phone</h4>
                                 <span class="contact-info_text">
-                                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a>
-                                    <a href="https://wa.me/{{ $contact->nomor_konsultasi }}" target="_blank">{{ $contact->nomor_konsultasi }}</a>
+                                    <a href="https://wa.me/{{ $contact->nomor_support }}"
+                                        target="_blank">{{ $contact->nomor_support }}</a>
+                                    <a href="https://wa.me/{{ $contact->nomor_konsultasi }}"
+                                        target="_blank">{{ $contact->nomor_konsultasi }}</a>
                                 </span>
                             </div>
                         </div>
@@ -112,5 +115,6 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.901373224165!2d109.92018097577784!3d-7.364951372476552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa1979e4a7a5f%3A0x7c75602f6f9cf748!2sPT%20Niaga%20Wasilah%20Al%20Khair!5e0!3m2!1sid!2sid!4v1705632675048!5m2!1sid!2sid"
             allowfullscreen="" loading="lazy"></iframe>
     </div>
+
 
 @endsection

@@ -5,7 +5,8 @@
 @section('content')
 
     <!--==============================Breadcumb============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black" data-opacity="8">
+    <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black"
+        data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Tentang Kami</h1>
@@ -24,83 +25,84 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-grid style4">
                         <div class="service-bg-shape">
-                            <img src="assets/img/shape/service-box-shape2.png" alt="img">
+                            <img src="{{ asset('assets/img/shape/service-box-shape2.png') }}" alt="img">
                         </div>
                         <div class="service-box_icon">
                             <div class="global-icon">
-                                <img src="assets/img/icon/service_icon_about_1.svg" alt="Icon">
+                                <img src="{{ asset('assets/new_img/i_care/5.png') }}" alt="Icon">
                             </div>
                         </div>
                         <div class="service-grid_content">
-                            <h3 class="service-title h5"><a href="service-details.html">Trusted Company</a></h3>
-                            <p class="service-grid_text">Facilisis arcu. Mauris mi orci, pulvinar ac finibus</p>
+                            <h3 class="service-title h5">INTEGRITY</h3>
+                            <p class="service-grid_text">Success without integrity is FAILURE</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-grid style4">
                         <div class="service-bg-shape">
-                            <img src="assets/img/shape/service-box-shape2.png" alt="img">
+                            <img src="{{ asset('assets/img/shape/service-box-shape2.png') }}" alt="img">
                         </div>
                         <div class="service-box_icon">
                             <div class="global-icon">
-                                <img src="assets/img/icon/service_icon_about_2.svg" alt="Icon">
+                                <img src="{{ asset('assets/new_img/i_care/2.png') }}" alt="Icon">
                             </div>
                         </div>
                         <div class="service-grid_content">
-                            <h3 class="service-title h5"><a href="service-details.html">Refund Guarantee</a></h3>
-                            <p class="service-grid_text">Dedicated Facilisis arcu. Mauris mi orci, pulvinar aca</p>
+                            <h3 class="service-title h5">COMPASSION</h3>
+                            <p class="service-grid_text">If you want others to be happy, practice compassion.If you want to be happy, practice compassion.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-grid style4">
                         <div class="service-bg-shape">
-                            <img src="assets/img/shape/service-box-shape2.png" alt="img">
+                            <img src="{{ asset('assets/img/shape/service-box-shape2.png') }}" alt="img">
                         </div>
                         <div class="service-box_icon">
                             <div class="global-icon">
-                                <img src="assets/img/icon/service_icon_about_3.svg" alt="Icon">
+                                <img src="{{ asset('assets/new_img/i_care/3.png') }}" alt="Icon">
                             </div>
                         </div>
                         <div class="service-grid_content">
-                            <h3 class="service-title h5"><a href="service-details.html">Non-Policy Fee</a></h3>
-                            <p class="service-grid_text">Support Facilisis arcu. Mauris mi pulvinar venen</p>
+                            <h3 class="service-title h5">ATITTUDE</h3>
+                            <p class="service-grid_text">The most important thing you'll ever wear is your atittude</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-grid style4">
                         <div class="service-bg-shape">
-                            <img src="assets/img/shape/service-box-shape2.png" alt="img">
+                            <img src="{{ asset('assets/img/shape/service-box-shape2.png') }}" alt="img">
                         </div>
                         <div class="service-box_icon">
                             <div class="global-icon">
-                                <img src="assets/img/icon/service_icon_about_3.svg" alt="Icon">
+                                <img src="{{ asset('assets/new_img/i_care/1.png') }}" alt="Icon">
                             </div>
                         </div>
                         <div class="service-grid_content">
-                            <h3 class="service-title h5"><a href="service-details.html">Non-Policy Fee</a></h3>
-                            <p class="service-grid_text">Support Facilisis arcu. Mauris mi pulvinar venen</p>
+                            <h3 class="service-title h5">RELIGIOUS</h3>
+                            <p class="service-grid_text">Religion is the impotence of the human mind to deal with occurrences it cannot understand</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service-grid style4">
                         <div class="service-bg-shape">
-                            <img src="assets/img/shape/service-box-shape2.png" alt="img">
+                            <img src="{{ asset('assets/img/shape/service-box-shape2.png') }}" alt="img">
                         </div>
                         <div class="service-box_icon">
                             <div class="global-icon">
-                                <img src="assets/img/icon/service_icon_about_3.svg" alt="Icon">
+                                <img src="{{ asset('assets/new_img/i_care/4.png') }}" alt="Icon">
                             </div>
                         </div>
                         <div class="service-grid_content">
-                            <h3 class="service-title h5"><a href="service-details.html">Non-Policy Fee</a></h3>
-                            <p class="service-grid_text">Support Facilisis arcu. Mauris mi pulvinar venen</p>
+                            <h3 class="service-title h5">EXCELLENCE</h3>
+                            <p class="service-grid_text">Excellence is doing ordinary things extraordinarily well</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -109,7 +111,8 @@
         <div class=" position-relative">
             <div class="img-half img-left feature-thumb-2">
                 <img src="{{ asset('uploads/' . $about->gambar_1) }}" alt="img">
-                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img src="{{ asset('uploads/' . $about->gambar_2) }}" alt="img"></div>
+                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img
+                        src="{{ asset('uploads/' . $about->gambar_2) }}" alt="img"></div>
             </div>
             <div class="container">
                 <div class="row justify-content-lg-end">
@@ -126,7 +129,8 @@
         </div>
     </div>
     <!--==============================Visi==============================-->
-    <div class="video-sec3 " data-bg-src="{{ asset('assets/new_img/bg_about_visi.jpg') }}" data-overlay="title" data-opacity="8">
+    <div class="video-sec3 " data-bg-src="{{ asset('assets/new_img/bg_about_visi.jpg') }}" data-overlay="title"
+        data-opacity="8">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -150,27 +154,27 @@
             <div class="row gy-30">
                 <!-- Single Item -->
                 @foreach ($managements as $data)
-                <div class="col-sm-6 col-lg-4 col-xxl-3">
-                    <div class="th-team team-card">
-                        <div class="team-img-wrap">
-                            <div class="team-img">
-                                <img src="{{ asset('uploads/' . $data->gambar) }}" alt="Team">
-                            </div>
-                            <div class="team-social-activate">
-                                <a class="team-social-activate_btn">
-                                    <i class="far fa-plus"></i>
-                                </a>
-                                <div class="team-social">
-                                    <a target="_blank" href="mailto:{{ $data->email }}"><i class="fas fa-envelope"></i>
+                    <div class="col-sm-6 col-lg-4 col-xxl-3">
+                        <div class="th-team team-card">
+                            <div class="team-img-wrap">
+                                <div class="team-img">
+                                    <img src="{{ asset('uploads/' . $data->gambar) }}" alt="Team">
+                                </div>
+                                <div class="team-social-activate">
+                                    <a class="team-social-activate_btn">
+                                        <i class="far fa-plus"></i>
+                                    </a>
+                                    <div class="team-social">
+                                        <a target="_blank" href="mailto:{{ $data->email }}"><i class="fas fa-envelope"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-title"><a href="team-details.html">{{ $data->nama }}</a></h3>
-                            <span class="team-desig">{{ $data->jabatan }}</span>
+                            <div class="team-content">
+                                <h3 class="team-title"><a href="team-details.html">{{ $data->nama }}</a></h3>
+                                <span class="team-desig">{{ $data->jabatan }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>

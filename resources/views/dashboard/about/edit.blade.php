@@ -41,13 +41,13 @@
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Gambar 1</label>
+                                    <label for="formFile" class="form-label">Gambar 1 (950x640)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_1" />
                                 </div>
                             </div>
                             <div class="row g-2">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Gambar 2</label>
+                                    <label for="formFile" class="form-label">Gambar 2 (350x300)</label>
                                     <input class="form-control" type="file" id="formFile" name="gambar_2" />
                                 </div>
                             </div>
