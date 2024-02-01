@@ -4,9 +4,7 @@
 
 @section('content')
 
-    <!--==============================
-                Breadcumb
-            ============================== -->
+    <!--==============================Breadcumb ============================== -->
     <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black"
         data-opacity="8">
         <div class="container">
@@ -19,9 +17,7 @@
             </div>
         </div>
     </div>
-    <!--==============================
-            Contact Area
-            ==============================-->
+    <!--==============================Contact Area==============================-->
     <div class="space-top">
         <div class="container">
             <div class="row gy-20">
@@ -72,11 +68,17 @@
                     </div>
                 </div>
                 <div class="col-xl-8">
-                    <form action="mail.php" method="POST" class="contact-form3 ajax-contact h-100">
+                    <form action="{{ url('message') }}" method="POST" class="contact-form3 h-100">
+                        @csrf
                         <h2 class="form-title h3 mb-30">Write a Massage</h2>
+                        @if (session('success'))
+                            <div id="success-message" class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control style-white" name="name" id="name"
+                                <input type="text" class="form-control style-white" name="nama" id="name"
                                     placeholder="Full name">
                             </div>
                             <div class="form-group col-md-6">
@@ -84,27 +86,21 @@
                                     placeholder="Email Address">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="tel" class="form-control style-white" name="number" id="number"
+                                <input type="number" class="form-control style-white" name="no_hp" id="no_hp"
                                     placeholder="Phone Number">
                             </div>
                             <div class="form-group col-md-6">
-                                <select name="subject" id="subject" class="form-select style-white">
-                                    <option value="" disabled selected hidden>Subject</option>
-                                    <option value="Web Development">Family Insurance</option>
-                                    <option value="Brand Marketing">Health Insurance</option>
-                                    <option value="UI/UX Designing">Life Insurance</option>
-                                    <option value="Digital Marketing">Vehicle Insurance</option>
-                                </select>
+                                <input type="subject" class="form-control style-white" name="subject" id="subject"
+                                    placeholder="Subject Address">
                             </div>
                             <div class="form-group col-12">
-                                <textarea name="message" id="message" cols="30" rows="3" class="form-control style-white"
+                                <textarea name="pesan" id="pesan" cols="30" rows="3" class="form-control style-white"
                                     placeholder="Your Message"></textarea>
                             </div>
                             <div class="form-btn col-12">
                                 <button class="th-btn">Submit Now <i class="fa fa-arrow-right"></i></button>
                             </div>
                         </div>
-                        <p class="form-messages mb-0 mt-3"></p>
                     </form>
                 </div>
             </div>
@@ -118,3 +114,11 @@
 
 
 @endsection
+
+@stack('js')
+
+<script>
+    setTimeout(function() {
+        document.getElementById('success-message').style.display = 'none';
+    }, 5000); // Hide the message after 3 seconds (3000 milliseconds)
+</script>

@@ -19,7 +19,7 @@
     <section class="space">
         <div class="container">
             <div class="error-img">
-                <img src="{{ asset('assets/img/theme-img/error.svg') }}" alt="404 image">
+                <img src="{{ asset('assets/new_img/error.svg') }}" alt="404 image">
             </div>
             <div class="error-content">
                 <h2 class="error-title h3">Oops! Page Not Found!</h2>

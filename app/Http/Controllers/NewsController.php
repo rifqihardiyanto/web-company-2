@@ -179,6 +179,6 @@ class NewsController extends Controller
         File::delete('uploads/' . $news->gambar);
         $news->delete();
 
-        return redirect('dashboard/news')->with('success', 'Data Berhasil Ditambah!');
+        return redirect('dashboard/news')->with('success', 'Data Berhasil Dihapus!');
     }
 }

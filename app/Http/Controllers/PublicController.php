@@ -7,10 +7,12 @@ use App\Models\Category;
 use App\Models\Categorynews;
 use App\Models\Contact;
 use App\Models\Management;
+use App\Models\Message;
 use App\Models\News;
 use App\Models\Product;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
 
 use function Ramsey\Uuid\v1;
@@ -71,5 +73,21 @@ class PublicController extends Controller
     public function notfound() 
     { 
         return view('public.404'); 
+    }
+
+    public function message(Request $request)
+    {
+        $validatedData = $request->validate([
+            "nama" => 'required',
+            "no_hp" => 'required',
+            "email" => 'required','email',
+            "subject" => 'nullable',
+            "pesan" => 'required'
+            // Add other validation rules as needed
+        ]);
+
+        $message = Message::create($validatedData);
+        return redirect('contact')->with('success', 'Pesan Berhasil Dikirim!');
+        
     }
 }

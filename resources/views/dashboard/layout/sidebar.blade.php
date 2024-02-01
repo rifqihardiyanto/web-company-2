@@ -65,6 +65,7 @@
                         <div data-i18n="Analytics">Dashboard</div>
                     </a>
                 </li>
+               
 
                 <!-- Layouts -->
                 <li class="menu-item">
@@ -129,8 +130,14 @@
                         </li>
                     </ul>
                 </li>
+                <li class="menu-item active">
+                    <a href="{{ url('dashboard/message') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-file"></i>
+                        <div data-i18n="Analytics">Message</div>
+                    </a>
+                </li>
                 <!-- Misc -->
-                <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
+                {{-- <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
                 <li class="menu-item">
                     <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues" target="_blank"
                         class="menu-link">
@@ -144,7 +151,7 @@
                         <i class="menu-icon tf-icons bx bx-file"></i>
                         <div data-i18n="Documentation">Documentation</div>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </aside>
         <!-- / Menu -->

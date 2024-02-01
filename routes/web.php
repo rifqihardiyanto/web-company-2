@@ -13,6 +13,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\CategorynewsController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::get('/contact', [PublicController::class, 'contact']);
 Route::get('/news', [PublicController::class, 'news']);
 Route::get('/news/{news:slug}', [PublicController::class, 'single_news']);
 Route::get('/notfound', [PublicController::class, 'notfound'])->name('notfound');
+Route::post('/message', [PublicController::class, 'message']);
 
 Route::middleware(['guest'])->group(function(){
     Route::get('login/dashboard/admin', [LoginController::class, 'login'])->name('login');
@@ -63,7 +65,8 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('dashboard/contact', ContactController::class);
     // Logo
     Route::resource('dashboard/logo', LogoController::class);
-
+    // Message
+    Route::resource('dashboard/message', MessageController::class);
 });
 
 
