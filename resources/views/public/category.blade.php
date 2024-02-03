@@ -14,10 +14,6 @@
                 <h1 class="breadcumb-title">Product</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="{{ url('') }}">Home</a></li>
-                    <li><a href="{{ url('products') }}">Semua Produk</a></li>
-                    @foreach ($categories as $data)
-                    <li><a href="{{ url('category/' . $data->id) }}" class="tab-btn">{{ $data->nama_kategori }}</a></li>
-                    @endforeach
                 </ul>
             </div>
         </div>

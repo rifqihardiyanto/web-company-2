@@ -116,7 +116,7 @@
                             max-width: 50px; 
                             overflow: hidden;
                             text-overflow: ellipsis;">
-                                {{ $data->deskripsi_1 }}</td>
+                                {!! $data->deskripsi_1 !!}</td>
                             <td>
                                 <img src="{{ asset('uploads/' . $data->gambar_1) }}" width="100" height="100"
                                     alt="">

@@ -12,7 +12,6 @@
                 <h1 class="breadcumb-title">Contact Us</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="{{ url('') }}">Home</a></li>
-                    <li>Contact Us</li>
                 </ul>
             </div>
         </div>
@@ -72,7 +71,7 @@
                         @csrf
                         <h2 class="form-title h3 mb-30">Write a Massage</h2>
                         @if (session('success'))
-                            <div id="success-message" class="alert alert-success">
+                            <div id="success-message-send" class="alert alert-success">
                                 {{ session('success') }}
                             </div>
                         @endif
@@ -115,10 +114,9 @@
 
 @endsection
 
-@stack('js')
 
-<script>
+{{-- <script>
     setTimeout(function() {
         document.getElementById('success-message').style.display = 'none';
     }, 5000); // Hide the message after 3 seconds (3000 milliseconds)
-</script>
+</script> --}}

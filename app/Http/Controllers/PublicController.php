@@ -87,7 +87,7 @@ class PublicController extends Controller
         ]);
 
         $message = Message::create($validatedData);
-        return redirect('contact')->with('success', 'Pesan Berhasil Dikirim!');
+        return redirect('contact')->with('success', 'Pesan Berhasil Dikirim! Silakan Tunggu Konfirmasi dari Kami. Terima Kasih!');
         
     }
 }

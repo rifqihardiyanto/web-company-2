@@ -41,13 +41,15 @@
                                 </div>
                             </div>
                             <div class="row g-2">
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 1</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi_1">{{ $product->deskripsi_1 }}</textarea>
+                                <div class="row g-2 mb-3">
+                                    <label for="formFile" class="form-label">Deskripsi 1</label>
+                                    <input id="deskripsi_1" type="hidden" value="{!! $product->deskripsi_1  !!}" name="deskripsi_1">
+                                    <trix-editor input="deskripsi_1"></trix-editor>
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-text">Deskripsi 2</span>
-                                    <textarea class="form-control" aria-label="With textarea" placeholder="Deskripsi" name="deskripsi_2">{{ $product->deskripsi_2 }}</textarea>
+                                <div class="row g-2 mb-3">
+                                    <label for="formFile" class="form-label">Deskripsi 2</label>
+                                    <input id="deskripsi_2" type="hidden" value="{!! $product->deskripsi_2  !!}" name="deskripsi_2">
+                                    <trix-editor input="deskripsi_2"></trix-editor>
                                 </div>
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Gambar (850 x 500)</label>
@@ -83,42 +85,54 @@
         </div>
     </div>
 
-    <div class="card">
-        <h5 class="card-header">Dashboard | @yield('title')</h5>
-        <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead class="table-dark">
+    
+    <div class="col-lg">
+        <div class="card mb-4">
+            <h5 class="card-header">Paragraph</h5>
+            <table class="table table-borderless">
+                <tbody>
                     <tr>
-                        <th>Nama @yield('title')</th>
-                        <th>Kategori</th>
-                        <th>Deskripsi</th>
-                        <th>Deskripsi</th>
-                        <th>Gambar</th>
-                        <th>Gambar</th>
-                        <th>Gambar</th>
-                        <th>Gambar</th>
+                        <td class="align-middle"><small class="text-light fw-semibold">Nama Produk</small></td>
+                        <td class="py-3">
+                            <p class="mb-0">
+                                {{ $product->nama_produk }}
+                            </p>
+                        </td>
                     </tr>
-                </thead>
-                <tbody class="table-border-bottom-10">
-                        <tr>
-                            <td>{{ $product->nama_produk }}</td>
-                            <td>{{ $product->category->nama_kategori }}</td>
-                            <td style="white-space: normal !important;">{{ $product->deskripsi_1 }}</td>
-                            <td style="white-space: normal !important;">{{ $product->deskripsi_2 }}</td>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Kategori</small></td>
+                        <td class="py-3">
+                            <p class="mb-0">
+                                {{ $product->category->nama_kategori }}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Deskripsi</small></td>
+                        <td class="py-4">
+                            <p class="lead mb-0">
+                                {!! $product->deskripsi_1  !!}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Deskripsi</small></td>
+                        <td class="py-4">
+                            <p class="lead mb-0">
+                                {!! $product->deskripsi_2  !!}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><small class="text-light fw-semibold">Foto</small></td>
                             <td>
-                                <img src="{{ asset('uploads/' . $product->gambar_1) }}" width="100" height="100" alt="">
+                                <img src="{{ asset('uploads/' . $product->gambar_1) }}" width="100" height="100" alt="" style="left: auto;">
+                                <img src="{{ asset('uploads/' . $product->gambar_2) }}" width="100" height="100" alt="" style="left: auto;">
+                                <img src="{{ asset('uploads/' . $product->gambar_3) }}" width="100" height="100" alt="" style="left: auto;">
+                                <img src="{{ asset('uploads/' . $product->gambar_4) }}" width="100" height="100" alt="" style="left: auto;">
                             </td>
-                            <td>
-                                <img src="{{ asset('uploads/' . $product->gambar_2) }}" width="100" height="100" alt="">
-                            </td>
-                            <td>
-                                <img src="{{ asset('uploads/' . $product->gambar_3) }}" width="100" height="100" alt="">
-                            </td>
-                            <td>
-                                <img src="{{ asset('uploads/' . $product->gambar_4) }}" width="100" height="100" alt="">
-                            </td>
-                        </tr>
-
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

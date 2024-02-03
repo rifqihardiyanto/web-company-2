@@ -41,12 +41,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="h4 mt-30">Coverage that cares for your family.</h3>
-                            <p class="mb-0">Vivamus sit amet efficitur mauris. Ut vehicula venenatis arcu id venenatis.
-                                Nam ac rutrum risus, nec vulputate arcu. Donec suscipit tellus eu lorem bibendum, eu maximus
-                                orci feugiat. Donec pulvinar vulputate finibus. Praesent tempor risus et gravida molestie.
-                                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-                                Lorem ipsum dolor sit amet</p>
+                            <h3 class="h4 mt-30">{{ $news->sub_judul }}</h3>
+                            <p class="mb-0">{!! $news->isi_3 !!}</p>
                         </div>
 
                     </div>

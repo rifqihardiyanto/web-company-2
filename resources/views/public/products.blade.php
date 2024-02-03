@@ -5,18 +5,12 @@
 @section('content')
 
     <!--==============================Breadcumb============================== -->
-    @php
-        $categories = App\Models\Category::all();
-    @endphp
     <div class="breadcumb-wrapper " data-bg-src="{{ asset('assets/new_img/bg_page.jpg') }}" data-overlay="black" data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Product</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="index.html">Home</a></li>
-                    @foreach ($categories as $data)
-                    <li><a href="{{ url('category/' . $data->id) }}" class="tab-btn">{{ $data->nama_kategori }}</a></li>
-                    @endforeach
                 </ul>
             </div>
         </div>

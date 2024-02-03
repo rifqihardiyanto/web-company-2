@@ -12,7 +12,6 @@
                 <h1 class="breadcumb-title">Tentang Kami</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="{{ url('') }}">Home</a></li>
-                    <li>About Us</li>
                 </ul>
             </div>
         </div>
@@ -149,7 +148,7 @@
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title">Our Team</span>
-                <h2 class="sec-title">Experience Team Members</h2>
+                <h2 class="sec-title">Experienced Team Professionals</h2>
             </div>
             <div class="row gy-30">
                 <!-- Single Item -->
@@ -160,17 +159,9 @@
                                 <div class="team-img">
                                     <img src="{{ asset('uploads/' . $data->gambar) }}" alt="Team">
                                 </div>
-                                <div class="team-social-activate">
-                                    <a class="team-social-activate_btn">
-                                        <i class="far fa-plus"></i>
-                                    </a>
-                                    <div class="team-social">
-                                        <a target="_blank" href="mailto:{{ $data->email }}"><i class="fas fa-envelope"></i>
-                                    </div>
-                                </div>
                             </div>
                             <div class="team-content">
-                                <h3 class="team-title"><a href="team-details.html">{{ $data->nama }}</a></h3>
+                                <h3 class="team-title"><a>{{ $data->nama }}</a></h3>
                                 <span class="team-desig">{{ $data->jabatan }}</span>
                             </div>
                         </div>

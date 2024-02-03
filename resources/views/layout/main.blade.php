@@ -7,7 +7,7 @@
         $contact = App\Models\Contact::first();
 
     @endphp
-    
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title')</title>
@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/png" href="{{ asset('uploads/' . $logo->logo_title) }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('uploads/' . $logo->logo_title) }}" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('uploads/' . $logo->logo_title) }}">
     <meta name="theme-color" content="#ffffff">
@@ -111,6 +111,9 @@
                                         alt="Insurax"></a>
                             </div>
                         </div>
+                        @php
+                            $categories = App\Models\Category::all();
+                        @endphp
                         <div class="col-auto me-xxl-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
@@ -120,8 +123,15 @@
                                     <li>
                                         <a href="{{ url('/about') }}">About</a>
                                     </li>
-                                    <li>
+                                    <li class="menu-item-has-children">
                                         <a href="{{ url('/products') }}">Product</a>
+                                        <ul class="sub-menu">
+                                            @foreach ($categories as $data)
+                                                <li><a
+                                                        href="{{ url('category/' . $data->id) }}">{{ $data->nama_kategori }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="{{ url('/news') }}">News</a>
