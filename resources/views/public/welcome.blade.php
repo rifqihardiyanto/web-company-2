@@ -180,7 +180,7 @@
                         <img src="{{ url('assets/img/update1/hero/hero_overlay_8.png') }}" alt="Hero Image">
                     </div>
                     <div class="hero-8-thumb" data-ani="slideinleft" data-ani-delay="0.05s"
-                        data-mask-src="{{ asset('assets/img/hero/home3-mask.png') }}">
+                        data-mask-src="{{ asset('assets/new_img/home3-mask.png') }}">
                         <img src="{{ asset('uploads/' . $data->gambar) }}" alt="img">
                     </div>
                     <div class="container">
@@ -261,7 +261,7 @@
         </div>
     </div>
     <!--============================== Brand Area ==============================-->
-    <section class="brand-sec1" data-bg-src="assets/img/bg/brand-bg1.png">
+    <section class="brand-sec1" data-bg-src="{{ asset('assets/new_img/brand-bg1.png') }}">
         <div class="title-area text-center mb-30">
             <span class="sub-title">Produk Kami</span>
             <h2 class="sec-title text-white">Solusi alami untuk kesehatan optimal</h2>
@@ -308,7 +308,7 @@
 
     <!--==============================Cta Area==============================-->
     <div class="container">
-        <div class="cta-sec5 text-lg-start text-center" data-bg-src="{{ asset('assets/img/bg/cta_bg_4.png') }}">
+        <div class="cta-sec5 text-lg-start text-center" data-bg-src="{{ asset('assets/new_img/cta_bg_4.png') }}">
             <div class="row gy-5 justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-auto order-lg-2">
                     <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="{{ asset('assets/img/icon/cta-icon-1.svg') }}" alt="img"></a>

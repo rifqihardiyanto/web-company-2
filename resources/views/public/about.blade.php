@@ -110,8 +110,7 @@
         <div class=" position-relative">
             <div class="img-half img-left feature-thumb-2">
                 <img src="{{ asset('uploads/' . $about->gambar_1) }}" alt="img">
-                <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img
-                        src="{{ asset('uploads/' . $about->gambar_2) }}" alt="img"></div>
+                {{-- <div class="shape-mockup jump z-index-3 d-sm-block d-none" data-right="0" data-bottom="0"><img src="{{ asset('uploads/' . $about->gambar_2) }}" alt="img"></div> --}}
             </div>
             <div class="container">
                 <div class="row justify-content-lg-end">

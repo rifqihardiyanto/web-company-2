@@ -5,7 +5,7 @@
         ->take(2)
         ->get();
 @endphp
-<footer class="footer-wrapper footer-layout2" data-bg-src="{{ asset('assets/img/bg/footer_bg_2.png') }}">
+<footer class="footer-wrapper footer-layout2" data-bg-src="{{ asset('assets/new_img/footer_bg_2.png') }}">
     <div class="widget-area">
         <div class="container">
             <div class="row justify-content-between">
@@ -18,7 +18,6 @@
                             <p class="about-text">Berkomitmen untuk menyediakan produk herbal solutif terbaik dan terus
                                 meningkatkan kualitasnya demi menyampaikan setiap kebaikan alam kepada masyarakat.</p>
                             <div class="th-social">
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="{{ $contact->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
@@ -101,8 +100,8 @@
                 <div class="col-auto">
                     <div class="footer-links">
                         <ul>
-                            <li><a href="#">Privacy </a></li>
-                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="{{ url('/privacy-police') }}">Privacy </a></li>
+                            <li><a href="{{ url('/terms-condition ') }}">Terms & Condition</a></li>
                             <li><a href="{{ url('/about') }}">About Us</a></li>
                         </ul>
                     </div>

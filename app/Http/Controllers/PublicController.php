@@ -90,4 +90,13 @@ class PublicController extends Controller
         return redirect('contact')->with('success', 'Pesan Berhasil Dikirim! Silakan Tunggu Konfirmasi dari Kami. Terima Kasih!');
         
     }
+
+    public function privacy() 
+    { 
+        return view('public.privacy_police'); 
+    }
+    public function terms_condition() 
+    { 
+        return view('public.term_condition'); 
+    }
 }

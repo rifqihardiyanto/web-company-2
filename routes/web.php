@@ -35,6 +35,8 @@ Route::get('/contact', [PublicController::class, 'contact']);
 Route::get('/news', [PublicController::class, 'news']);
 Route::get('/news/{news:slug}', [PublicController::class, 'single_news']);
 Route::get('/notfound', [PublicController::class, 'notfound'])->name('notfound');
+Route::get('/privacy-police', [PublicController::class, 'privacy']);
+Route::get('/terms-condition', [PublicController::class, 'terms_condition']);
 Route::post('/message', [PublicController::class, 'message']);
 
 Route::middleware(['guest'])->group(function(){
