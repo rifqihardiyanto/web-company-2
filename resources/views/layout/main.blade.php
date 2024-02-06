@@ -5,6 +5,7 @@
     @php
         $logo = App\Models\Logo::first();
         $contact = App\Models\Contact::first();
+        $categories = App\Models\Category::all();
 
     @endphp
 
@@ -85,8 +86,13 @@
                     <li>
                         <a href="{{ url('/about') }}">About</a>
                     </li>
-                    <li>
-                        <a href="{{ url('/products') }}">Product</a>
+                    <li class="menu-item-has-children">
+                        <a href="#">Product</a>
+                        <ul class="sub-menu">
+                            @foreach ($categories as $data)
+                                <li><a href="{{ url('category/' . $data->id) }}">{{ $data->nama_kategori }}</a></li>
+                            @endforeach
+                        </ul>
                     </li>
                     <li>
                         <a href="{{ url('/news') }}">News</a>
@@ -127,9 +133,7 @@
                                         <a href="{{ url('/products') }}">Product</a>
                                         <ul class="sub-menu">
                                             @foreach ($categories as $data)
-                                                <li><a
-                                                        href="{{ url('category/' . $data->id) }}">{{ $data->nama_kategori }}</a>
-                                                </li>
+                                                <li><a href="{{ url('category/' . $data->id) }}">{{ $data->nama_kategori }}</a></li>
                                             @endforeach
                                         </ul>
                                     </li>
@@ -152,7 +156,9 @@
                                     </div>
                                     <div class="media-body">
                                         <span class="header-info_label">Need Help? Talk with Us</span>
-                                        <p class="header-info_link"><a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">{{ $contact->nomor_support }}</a>
+                                        <p class="header-info_link"><a
+                                                href="https://wa.me/{{ $contact->nomor_support }}"
+                                                target="_blank">{{ $contact->nomor_support }}</a>
                                         </p>
                                     </div>
                                 </div>

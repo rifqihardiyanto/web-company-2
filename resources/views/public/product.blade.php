@@ -30,7 +30,7 @@
                         <img src="{{ asset('uploads/' . $product->gambar_2) }}" alt="Project Image">
                     </div>
                 </div>
-                {{-- <div class="col-lg-10">
+                <div class="col-lg-10">
                     <ul class="project-details-wrap">
                         <li>
                             <h6>Produk:</h6>
@@ -45,7 +45,7 @@
                                 <a href="https://wa.me/{{ $contact->nomor_konsultasi }}" target="_blank"><p>{{ $contact->nomor_konsultasi }} </p></a>
                             </li>
                     </ul>
-                </div> --}}
+                </div>
             </div>
             <div class="page-single mt-30">
                 <div class="page-content">

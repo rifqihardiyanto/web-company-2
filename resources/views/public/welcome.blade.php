@@ -78,8 +78,13 @@
                     <li>
                         <a href="{{ url('/about') }}">About</a>
                     </li>
-                    <li>
-                        <a href="{{ url('/products') }}">Product</a>
+                    <li class="menu-item-has-children">
+                        <a href="#">Product</a>
+                        <ul class="sub-menu">
+                            @foreach ($categories as $data)
+                                <li><a href="{{ url('category/' . $data->id) }}">{{ $data->nama_kategori }}</a></li>
+                            @endforeach
+                        </ul>
                     </li>
                     <li>
                         <a href="{{ url('/news') }}">News</a>
@@ -147,8 +152,13 @@
                                                 <li>
                                                     <a href="{{ url('/about') }}">About</a>
                                                 </li>
-                                                <li>
+                                                <li class="menu-item-has-children">
                                                     <a href="{{ url('/products') }}">Product</a>
+                                                    <ul class="sub-menu">
+                                                        @foreach ($categories as $data)
+                                                            <li><a href="{{ url('category/' . $data->id) }}">{{ $data->nama_kategori }}</a></li>
+                                                        @endforeach
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('/news') }}">News</a>
@@ -185,7 +195,8 @@
                     </div>
                     <div class="container">
                         <div class="hero-style8">
-                            <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">{{ $data->judul }}</span>
+                            <span class="hero-subtitle" data-ani="slideindown"
+                                data-ani-delay="0.5s">{{ $data->judul }}</span>
                             <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.3s">
                                 {{ $data->sub_judul }}</h1>
                             <p class="hero-text" data-ani="slideinup" data-ani-delay="0.1s">{{ $data->deskripsi }}
@@ -311,12 +322,15 @@
         <div class="cta-sec5 text-lg-start text-center" data-bg-src="{{ asset('assets/new_img/cta_bg_4.png') }}">
             <div class="row gy-5 justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-auto order-lg-2">
-                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank" class="cta-icon play-btn"><img src="{{ asset('assets/img/icon/cta-icon-1.svg') }}" alt="img"></a>
+                    <a href="https://wa.me/{{ $contact->nomor_support }}" target="_blank"
+                        class="cta-icon play-btn"><img src="{{ asset('assets/img/icon/cta-icon-1.svg') }}"
+                            alt="img"></a>
                 </div>
                 <div class="col-lg-auto order-lg-1">
                     <div class="cta-info-wrap">
                         <h3 class="mb-10 fw-semibold">
-                            <a class="text-white" href="https://wa.me/{{ $contact->nomor_support }}" target="_blank">Admin Nashir</a>
+                            <a class="text-white" href="https://wa.me/{{ $contact->nomor_support }}"
+                                target="_blank">Admin Nashir</a>
                         </h3>
                         <h5 class="mb-0 fw-medium">
                             <p class="text-white">{{ $contact->email_support }}</p>
